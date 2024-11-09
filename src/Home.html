@@ -1,17 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./output.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
+  <nav class="bg-black fixed w-full z-20 top-0 start-0">
+    <div class="max-w-screen-xl flex items-center justify-between mx-20">
+      <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/logo.png" class="h-13" alt="Nexio Logo">
+      </a>
+      <button class="inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden ml-auto"
+        onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5h14a1 1 0 100-2H3a1 1 0 100 2zM3 10h14a1 1 0 100-2H3a1 1 0 100 2zM3 15h14a1 1 0 100-2H3a1 1 0 100 2z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+      <div class="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse flex-grow justify-center">
+        <ul class="flex space-x-8 font-semibold text-2xl text-white">
+          <li><a href="Home.html" class="hover:text-primary">Home</a></li>
+          <li><a href="Catalogue.html" class="hover:text-primary">Catalog</a></li>
+          <li><a href="Apropos.html" class="hover:text-primary">About</a></li>
+          <li><a href="Contact.html" class="hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hidden md:block ml-10">
+        <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
+      </div>
+    </div>
+
+    <div class="flex justify-end md:hidden pr-52" id="navbar-sticky">
+      <ul class="flex flex-col p-4 font-semibold text-2xl text-white">
+        <li><a href="Home.html" class="block py-2 hover:text-primary">Home</a></li>
+        <li><a href="Catalogue.html" class="block py-2 hover:text-primary">Catalog</a></li>
+        <li><a href="Apropos.html" class="block py-2 hover:text-primary">About</a></li>
+        <li><a href="Contact.html" class="block py-2 hover:text-primary">Contact</a></li>
+        <li class="py-2 flex justify-center">
+          <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
 
 
-    <script src="./js/Home.js"></script>
+
+
+
+
+
+
+
+  <script src="./js/Home.js"></script>
 </body>
+
 </html>
