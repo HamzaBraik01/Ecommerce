@@ -15,7 +15,8 @@ const carts = [
             amd:["Ryzen 5 7600","Ryzen 7 7800X3D","Ryzen 7 5800X3D","Ryzen 9 7950X3D","Ryzen 5 7600X","Ryzen 5 5600X","AMD Ryzen 5 5600G"],
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
-        price:12000
+        price:12000,
+        image:"../image/thinkStation_P620.avif"
     },
     {
         id:2,
@@ -32,7 +33,8 @@ const carts = [
             amd:["Ryzen 5 7600","Ryzen 7 7800X3D","Ryzen 7 5800X3D","Ryzen 9 7950X3D","Ryzen 5 7600X","Ryzen 5 5600X","AMD Ryzen 5 5600G"],
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
-        price:10000
+        price:10000,
+        image:"../image/HP-Z4-G5-W3-2423-Workstation.jpg"
     },
     {
         id:3,
@@ -49,7 +51,8 @@ const carts = [
             amd:["Ryzen 5 7600","Ryzen 7 7800X3D","Ryzen 7 5800X3D","Ryzen 9 7950X3D","Ryzen 5 7600X","Ryzen 5 5600X","AMD Ryzen 5 5600G"],
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
-        price:13000
+        price:13000,
+        image:"../image/alienware-aurora-r12.webp"
     },
     {
         id:4,
@@ -66,7 +69,8 @@ const carts = [
             amd:["Ryzen 5 7600","Ryzen 7 7800X3D","Ryzen 7 5800X3D","Ryzen 9 7950X3D","Ryzen 5 7600X","Ryzen 5 5600X","AMD Ryzen 5 5600G"],
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
-        price:9000
+        price:9000,
+        image:"../image/HP_Omen_30L.jpg"
     },
     {
         id:5,
@@ -83,7 +87,8 @@ const carts = [
             amd:["Ryzen 5 7600","Ryzen 7 7800X3D","Ryzen 7 5800X3D","Ryzen 9 7950X3D","Ryzen 5 7600X","Ryzen 5 5600X","AMD Ryzen 5 5600G"],
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
-        price:10000
+        price:10000,
+        image:"../image/msi_trident_3.jpg"
     },
     {
         id:6,
@@ -97,7 +102,8 @@ const carts = [
             intel:["Arc A750","Arc A380"]
         },
         processeur:null,
-        price:7500
+        price:7500,
+        image:"../image/CyberPowerPC_Gamer_Xtreme_VR.jpg"
     },
     {
         id:7,
@@ -107,7 +113,8 @@ const carts = [
         memoire:null,
         graphics:null,
         processeur:null,
-        price:10000
+        price:10000,
+        image:"../image/corsair_vengence.jpg"
     },
     {
         id:8,
@@ -117,7 +124,8 @@ const carts = [
         memoire:["250GB","500GB","1TB"],
         graphics:null,
         processeur:null,
-        price:8000
+        price:8000,
+        image:"../image/dell_precision.jpg"
     },
     //Smartphone
     {
@@ -130,7 +138,8 @@ const carts = [
             Exynos:["Exynos 2200","Exynos 2400","Exynos 1480","Exynos 1330"],
             Snapdragon:["Snapdragon 8 Gen 2","Snapdragon 7 Gen 2","Snapdragon 6 Gen 2","Snapdragon 4 Gen 2"]
         },
-        price:12000
+        price:12000,
+        image:"../image/S24Ultra.jpg"
     },
     {
         id:10,
@@ -139,7 +148,8 @@ const carts = [
         description:"Equipped with a 6.7 Super Retina XDR display, A16 Bionic chip, and 6GB RAM, this phone provides top-tier performance and a high-quality camera system.",
         memoire:["125GB","250GB","500GB"],
         processeur:null,
-        price:11000
+        price:11000,
+        image:"../image/iphone14.jpg"
     },
     {
         id:11,
@@ -148,7 +158,8 @@ const carts = [
         description:"With a 6.7 OLED display, Tensor G2 processor, and 12GB RAM, this phone delivers powerful performance and advanced AI capabilities.",
         memoire:["125GB","250GB","500GB"],
         processeur:null,
-        price:9000
+        price:9000,
+        image:"../image/googlePixel.jpg"
     },
     {
         id:12,
@@ -157,7 +168,8 @@ const carts = [
         description:"Featuring a 6.7 Fluid AMOLED display, Snapdragon 8 Gen 2 processor, and 12GB RAM, this phone offers smooth performance and a vibrant display.	",
         memoire:["125GB","250GB","500GB"],
         processeur:null,
-        price:9000
+        price:9000,
+        image:"../image/onePlus_!1.jpg"
     },
     {
         id:13,
@@ -169,7 +181,8 @@ const carts = [
             Exynos:["Exynos 2200","Exynos 2400","Exynos 1480","Exynos 1330"],
             Snapdragon:["Snapdragon 8 Gen 2","Snapdragon 7 Gen 2","Snapdragon 6 Gen 2","Snapdragon 4 Gen 2"]
         },
-        price:9500
+        price:9500,
+        image:"../image/xiomi14.jpg"
     },
     //souris
     {
@@ -179,7 +192,8 @@ const carts = [
         description:"Lightweight design, HERO 25K sensor, and LIGHTFORCE Hybrid switches",
         dpi:["100","25600"],
         color:["black","white"],
-        price:1500
+        price:1500,
+        image:"../image/logitechProX.jpg"
     },
     {
         id:15,
@@ -188,7 +202,8 @@ const carts = [
         description:"Focus Pro 35K sensor, optical switches, and ambidextrous design",
         dpi:["100","35000"],
         color:["black","white","orange"],
-        price:1300
+        price:1300,
+        image:"../image/razerViper.jpg"
     },
     {
         id:16,
@@ -197,7 +212,8 @@ const carts = [
         description:"HERO 25K sensor, LIGHTFORCE Hybrid switches, and wireless",
         dpi:["100","32000"],
         color:["black","white"],
-        price:1500
+        price:1500,
+        image:"../image/logitechProX.jpg"
     },
     {
         id:17,
@@ -206,7 +222,8 @@ const carts = [
         description:"Focus Pro 30K sensor, ergonomic design, and wireless",
         dpi:["100","32000"],
         color:["black","white","blue"],
-        price:1400
+        price:1400,
+        image:"../image/razerDeathAdder.jpg"
     },
     {
         id:18,
@@ -215,7 +232,9 @@ const carts = [
         description:"PMW 3370 sensor, ergonomic design, and wireless",
         dpi:["100","32000"],
         color:["black","white","red"],
-        price:1200
+        price:1200,
+        image:"../image/ZowieEc2.jpg"
+
     },
     //moniteur
     {
@@ -225,6 +244,7 @@ const carts = [
         description:"24.5 FHD IPS monitor with 1ms response time and Adaptive Sync support",
         RefreshRate:"100Hz",
         price:2000,
+        image:"../image/CoolerMasterGA.jpg"
     },
     {
         id:20,
@@ -233,6 +253,7 @@ const carts = [
         description:"27 FHD IPS monitor with 1ms response time and FreeSync support",
         RefreshRate:"100Hz",
         price:1500,
+        image:"../image/CoolerMasterGA2701.jpg"
     },
     {
         id:21,
@@ -240,7 +261,8 @@ const carts = [
         name:"Samsung C24RG50",
         description:"24 curved gaming monitor with FreeSync support",
         RefreshRate:"144Hz",
-        price:3000
+        price:3000,
+        image:"../image/SamsangC24RCG50.jpg"
     },
     // casque
     {
@@ -249,7 +271,8 @@ const carts = [
         name:"Sony WH-1000XM4",
         description:"Premium noise-cancelling headphones with excellent sound quality and comfort",
         price:350,
-        size:"universal"
+        size:"universal",
+        image:"../image/SonyWh.jpg"
     },
     {
         id:23,
@@ -257,7 +280,8 @@ const carts = [
         name:"Bose QuietComfort Ultra",
         description:"Over-ear headphones with adaptive noise cancellation and immersive audio experience",
         price:400,
-        size:"universal"
+        size:"universal",
+        image:"../image/BoseQuitComfort.jpg"
     },
     {
         id:24,
@@ -265,7 +289,8 @@ const carts = [
         name:"Cambridge Audio Melomania P100",
         description:"High-end wireless headphones with expansive sound and 100 hours of battery life",
         price:300,
-        size:"universal"
+        size:"universal",
+        image:"../image/CambridgeAudio.jpg"
     },
     //manette
     {
@@ -275,6 +300,7 @@ const carts = [
         description:"High-end controller with customizable components, adjustable-tension thumbsticks, and a premium design",
         color:["Black","white"],
         price:500,
+        image:"../image/xboxElitSerie2.jpg"
     },
     {
         id:26,
@@ -283,6 +309,7 @@ const carts = [
         description:"Advanced controller for PlayStation 5 with customizable buttons, adjustable triggers, and a sleek design",
         color:["White with black accents"],
         price:600,
+        image:"../image/sonyDualSenseEdge.jpg"
     },
     //electromenager
     {
@@ -291,7 +318,8 @@ const carts = [
         name:"Samsung Family Hub Refrigerator",
         description:"A smart refrigerator with a built-in touchscreen, multiple storage compartments, and advanced cooling technology.",
         price:25000,
-        litrage:671
+        litrage:671,
+        image:"../image/SamsangFamilyHub.jpg"
     },
     {
         id:28,
@@ -299,7 +327,8 @@ const carts = [
         name:"Philips Airfryer XXL",
         description:"A large-capacity air fryer with rapid air technology for healthy frying, baking, grilling, and roasting",
         price:3000,
-        litrage:3.5
+        litrage:3.5,
+        image:"../image/philipsAirfryerXXl.jpg"
     },
     {
         id:29,
@@ -307,7 +336,8 @@ const carts = [
         name:"Bosch Serie 8 Washing Machine",
         description:"A front-loading washing machine with EcoSilence Drive, anti-vibration design, and a range of wash programs.",
         price:12000,
-        litrage:9
+        litrage:9,
+        image:"../image/BoashSerie8WashingMachine.jpg"
     }
 ]
 export default carts;
