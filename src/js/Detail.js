@@ -154,3 +154,5 @@ proc.addEventListener("change",function(){
     }
 })
 //get the price
+const prix = document.getElementById("price")
+prix.innerText = obj.price + "dh"
