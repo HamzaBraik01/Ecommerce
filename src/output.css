@@ -554,8 +554,68 @@ video {
   display: none;
 }
 
-.w-1\/2 {
-  width: 50%;
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.bg-\[\#FC6736\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 103 54 / var(--tw-bg-opacity));
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[23px\] {
+  font-size: 23px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-\[\#73726F\] {
+  --tw-text-opacity: 1;
+  color: rgb(115 114 111 / var(--tw-text-opacity));
+}
+
+.text-\[\#FC6736\] {
+  --tw-text-opacity: 1;
+  color: rgb(252 103 54 / var(--tw-text-opacity));
 }
 
 .text-blue-700 {
