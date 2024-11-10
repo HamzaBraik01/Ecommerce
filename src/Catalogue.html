@@ -8,24 +8,52 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-purple-200">
+        <body class="bg-purple-200 flex items-center justify-center min-h-screen">
 
-    <div class="navbar">
-        <div class="max-w-6xl">
+    <!-- Centered Content Wrapper -->
+    <div class="max-w-6xl mx-auto p-6 text-center">
 
-        </div>
-    </div>
-    <section class="catalogue" id="catalogue">
-        <div class="product">
-            <div class="container">
-                <button id="personnaliser" class="bg-blue-600 text-white px-4 py-2 rounded-full">personnaliser</button>
-                <button id="ajouter" class="bg-blue-600 text-white px-4 py-2 rounded-full">Ajouter au panier</button>
+        <!-- Navbar -->
+        
+
+        <!-- Catalogue Section -->
+        <section class="catalogue" id="catalogue">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Shop All</h2>
+
+            <!-- Filter Buttons -->
+            <div id="filter-buttons" class="flex justify-center space-x-4 mb-6">
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="Smartphone">Smartphones</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="pc">Laptops</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="moniteur">Television</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="electromenager">Household</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="manette">Games</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="casque">Headset</button>
+                <button style="background-color: #FC6736;" class="filter-btn px-4 py text-white rounded" data-category="souris">Mouse</button>
             </div>
-        </div>
-    </section>
 
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="card">
 
-    <script src="./js/Catalogue.js"></script>
+                <!-- Product Card -->
+                <!-- <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="font-bold text-lg mb-2">Product Name</h3>
+                    <p class="text-gray-600 mb-4">This is a brief description of the product. It highlights key features and details.</p>
+                    <p class="font-bold text-green-500 text-xl mb-4">$99.99</p>
+                    <div class="flex justify-center space-x-4">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-full">Add to Cart</button>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-full">Customize</button>
+                    </div>
+                </div> -->
+
+    
+
+                <!-- Repeat this card structure until there are 12 product cards in total -->
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="./js/Catalogue.js"></script>
 </body>
 
 </html>
