@@ -6,7 +6,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-let finalMemoriePrice , finalCartPrice , finalProcessurePrice;
+let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0;
 //afficher image
 const image = document.getElementById("image");
 const img = document.createElement("img");
@@ -36,6 +36,9 @@ if(obj.memoire != null){
         memoire.appendChild(label)
     })
 }
+function updatePrice(){
+    pricecontent.innerText = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice;
+}
 // prendre le value de memoire checked
 memoire.addEventListener("change",function(){
         const chosenMemoire = document.querySelector('input[name = "memoire"]:checked').value;
@@ -43,23 +46,18 @@ memoire.addEventListener("change",function(){
         if(chosenMemoire == "250GB" && price == 1200){
             pricecontent.innerText = price 
         }
-        else if(chosenMemoire == "250GB" && price > 1200){
-            price = obj.price;
-            pricecontent.innerText = price
+        switch(chosenMemoire){
+            case "250GB":
+            finalMemoriePrice = 0;
+            break;
+            case "500GB":
+            finalMemoriePrice = 500;
+            break;
+            case "1TB":
+            finalMemoriePrice = 1000;
+            break;
         }
-        if(chosenMemoire == "500GB" && price == 1200 ){
-            pricecontent.innerText = price + 500
-        }
-        else if(chosenMemoire == "500GB" && price > 1200){
-            price = obj.price;
-            pricecontent.innerText = price + 500
-        }
-        if(chosenMemoire == "1TB"&& price == 1200 ){
-            pricecontent.innerText = price + 1000
-        }
-        else if(chosenMemoire == "1TB" && price > 1200){
-            pricecontent.innerText = price + 1000
-        }
+        updatePrice()
 })
 
 const graphic = document.getElementById("graphic");
@@ -79,7 +77,6 @@ if(obj.graphics != null){
         graphic.appendChild(label)
     })
 }
-
 
 //get the value 
 graphic.addEventListener("change",()=>{
@@ -104,30 +101,29 @@ graphic.addEventListener("change",()=>{
                 console.log(button.value)
                 switch(button.value){
                     case "RTX 4090":
-                        finalPrice = ""
-                        finalPrice +=700;
-                        pricecontent.innerText = finalPrice;
+                        finalCartPrice = null
+                        finalCartPrice = 500
                         break;
                     case "RTX 4070":
-                        finalPrice +=900;
-                        pricecontent.innerText = finalPrice;
+                        finalCartPrice = null
+                        finalCartPrice = 700
                         break;
                     case "GeForce RTX 4060":
-                        finalPrice += 1000;
-                        pricecontent.innerText = finalPrice;
+                        finalCartPrice = null
+                        finalCartPrice = 900
                         break;
                     case "GeForce RTX 4080":
-                        finalPrice += 1200;
-                        pricecontent.innerText = finalPrice;
+                        finalCartPrice = null
+                        finalCartPrice = 1000
                         break;
                     case "RTX 4060 Ti":
-                        finalPrice += 950;
-                        pricecontent.innerText = finalPrice;
+                        finalCartPrice = null
+                        finalCartPrice = 1200
                         break;
                     default:
-                        pricecontent.innerHTML = finalPrice;
-
+                        finalCartPrice = 0
                 }
+                updatePrice()
             })
         })
     }
@@ -142,6 +138,30 @@ graphic.addEventListener("change",()=>{
             graphic.appendChild(div)
             button.addEventListener("click",()=>{
                 console.log(button.value)
+                switch(button.value){
+                    case "Radeon RX 7900 XTX":
+                        finalCartPrice = null
+                        finalCartPrice = 800
+                        break;
+                    case "Radeon RX 7600":
+                        finalCartPrice = null
+                        finalCartPrice = 900
+                        break;
+                    case "Radeon RX 7800 XT":
+                        finalCartPrice = null
+                        finalCartPrice = 750
+                        break;
+                    case "Radeon RX 7900 XT":
+                        finalCartPrice = null
+                        finalCartPrice = 900
+                        break;
+                    case "Radeon RX 6700 XT":
+                        finalCartPrice = null
+                        finalCartPrice = 450
+                        break;
+                    default:
+                }
+                updatePrice()
             })
         })
     }
@@ -156,6 +176,17 @@ graphic.addEventListener("change",()=>{
             graphic.appendChild(div)
             button.addEventListener("click",()=>{
                 console.log(button.value)
+                switch(button.value){
+                    case "Arc A750":
+                        finalCartPrice = null
+                        finalCartPrice = 590
+                        break
+                    case "Arc A380":
+                        finalCartPrice = null
+                        finalCartPrice = 700
+                        break;
+                }
+                updatePrice()
             })
         })
     }
@@ -198,6 +229,41 @@ proc.addEventListener("change",function(){
             button.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(button)
             div.classList.add("inline-block")
+            button.addEventListener("click",()=>{
+                switch(button.value){
+                    case "Ryzen 5 7600":
+                        finalProcessurePrice = null;
+                        finalProcessurePrice = 800;
+                        break
+                    case "Ryzen 7 7800X3D":
+                        finalProcessurePrice = null;
+                        finalProcessurePrice = 970
+                        break;
+                    case "Ryzen 7 5800X3D":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 890
+                        break;
+                    case "Ryzen 9 7950X3D":
+                        finalProcessurePrice = null;
+                        finalProcessurePrice = 800;
+                        break;
+                    case "Ryzen 5 7600X":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 760
+                        break;
+                    case "Ryzen 5 5600X":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 898
+                        break;
+                    case "AMD Ryzen 5 5600G":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 777
+                        break;
+                    default:
+                        finalCartPrice = 0;
+                }
+                updatePrice()
+            })
         })
     }
     if(radio == "intel"){
@@ -209,6 +275,30 @@ proc.addEventListener("change",function(){
             intelButton.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(intelButton)
             div.classList.add("inline-block")
+            intelButton.addEventListener("click",function(){
+                switch(intelButton.value){
+                    case "Core i3-13100F":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 899
+                        break;
+                    case "Core i5-13600K":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 777
+                        break;
+                    case "Core i9-13900K":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 675
+                        break
+                    case "Core i7-13700K":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 1500
+                        break
+                    case "Intel Core i5-13400":
+                        finalProcessurePrice = null
+                        finalProcessurePrice = 1000
+                }
+                updatePrice()
+            })
         })
     }
 })
