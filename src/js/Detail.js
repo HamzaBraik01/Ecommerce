@@ -3,6 +3,10 @@ let id = 1;
 // prendre un seul produit
 const obj = carts.find(obj => obj.id == id);
 console.log(obj)
+// prendre le prix
+let price = obj.price
+const pricecontent = document.getElementById("price")
+let finalMemoriePrice , finalCartPrice , finalProcessurePrice;
 //afficher image
 const image = document.getElementById("image");
 const img = document.createElement("img");
@@ -36,6 +40,26 @@ if(obj.memoire != null){
 memoire.addEventListener("change",function(){
         const chosenMemoire = document.querySelector('input[name = "memoire"]:checked').value;
         console.log(chosenMemoire)
+        if(chosenMemoire == "250GB" && price == 1200){
+            pricecontent.innerText = price 
+        }
+        else if(chosenMemoire == "250GB" && price > 1200){
+            price = obj.price;
+            pricecontent.innerText = price
+        }
+        if(chosenMemoire == "500GB" && price == 1200 ){
+            pricecontent.innerText = price + 500
+        }
+        else if(chosenMemoire == "500GB" && price > 1200){
+            price = obj.price;
+            pricecontent.innerText = price + 500
+        }
+        if(chosenMemoire == "1TB"&& price == 1200 ){
+            pricecontent.innerText = price + 1000
+        }
+        else if(chosenMemoire == "1TB" && price > 1200){
+            pricecontent.innerText = price + 1000
+        }
 })
 
 const graphic = document.getElementById("graphic");
@@ -72,11 +96,38 @@ graphic.addEventListener("change",()=>{
             const button = document.createElement("button")
             button.innerText = item
             button.setAttribute("value",item)
+            button.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(button)
-            div.classList.add("flex-1")
+            div.classList.add("inline-block")
             graphic.appendChild(div)
             button.addEventListener("click",()=>{
                 console.log(button.value)
+                switch(button.value){
+                    case "RTX 4090":
+                        finalPrice = ""
+                        finalPrice +=700;
+                        pricecontent.innerText = finalPrice;
+                        break;
+                    case "RTX 4070":
+                        finalPrice +=900;
+                        pricecontent.innerText = finalPrice;
+                        break;
+                    case "GeForce RTX 4060":
+                        finalPrice += 1000;
+                        pricecontent.innerText = finalPrice;
+                        break;
+                    case "GeForce RTX 4080":
+                        finalPrice += 1200;
+                        pricecontent.innerText = finalPrice;
+                        break;
+                    case "RTX 4060 Ti":
+                        finalPrice += 950;
+                        pricecontent.innerText = finalPrice;
+                        break;
+                    default:
+                        pricecontent.innerHTML = finalPrice;
+
+                }
             })
         })
     }
@@ -85,8 +136,9 @@ graphic.addEventListener("change",()=>{
             const button = document.createElement("button")
             button.innerText = item
             button.setAttribute("value",item)
+            button.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(button)
-            div.classList.add("flex-1")
+            div.classList.add("inline-block")
             graphic.appendChild(div)
             button.addEventListener("click",()=>{
                 console.log(button.value)
@@ -98,8 +150,9 @@ graphic.addEventListener("change",()=>{
             const button = document.createElement("button")
             button.innerText = item
             button.setAttribute("value",item)
+            button.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(button)
-            div.classList.add("flex-1")
+            div.classList.add("inline-block")
             graphic.appendChild(div)
             button.addEventListener("click",()=>{
                 console.log(button.value)
@@ -110,19 +163,21 @@ graphic.addEventListener("change",()=>{
 })
 //get the processeur 
 const proc = document.getElementById("processeur")
-Object.keys(obj.processeur).forEach(item=>{
-    const radio = document.createElement("input")
-    radio.setAttribute("type","radio");
-    radio.setAttribute("value",item)
-    const label = document.createElement("label")
-    label.textContent = item
-    label.style.marginRight = '10px'
-    label.style.marginLeft = "2px"
-    radio.style.accentColor = "#FC6736"
-    radio.setAttribute("name","processeur")
-    proc.appendChild(radio)
-    proc.appendChild(label)
-})
+if(obj.processeur != null){
+    Object.keys(obj.processeur).forEach(item=>{
+        const radio = document.createElement("input")
+        radio.setAttribute("type","radio");
+        radio.setAttribute("value",item)
+        const label = document.createElement("label")
+        label.textContent = item
+        label.style.marginRight = '10px'
+        label.style.marginLeft = "2px"
+        radio.style.accentColor = "#FC6736"
+        radio.setAttribute("name","processeur")
+        proc.appendChild(radio)
+        proc.appendChild(label)
+    })
+}
 
 proc.addEventListener("change",function(){
     const radio = document.querySelector("input[name = 'processeur']:checked").value;
@@ -140,7 +195,9 @@ proc.addEventListener("change",function(){
             const button = document.createElement("button");
             button.innerHTML = item
             button.value = item
+            button.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(button)
+            div.classList.add("inline-block")
         })
     }
     if(radio == "intel"){
@@ -149,10 +206,9 @@ proc.addEventListener("change",function(){
             const intelButton = document.createElement("button")
             intelButton.innerHTML = item
             intelButton.value = item
+            intelButton.classList.add("bg-[#FC6736]","text-white","rounded-sm","p-2" , "mr-1" , "mt-1")
             div.appendChild(intelButton)
+            div.classList.add("inline-block")
         })
     }
 })
-//get the price
-const prix = document.getElementById("price")
-prix.innerText = obj.price + "dh"
