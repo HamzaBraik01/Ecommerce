@@ -16,7 +16,7 @@ const carts = [
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
         price:12000,
-        image:"../image/thinkStation_P620.avif"
+        image:"./image/thinkStation_P620.avif"
     },
     {
         id:2,
@@ -34,7 +34,7 @@ const carts = [
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
         price:10000,
-        image:"../image/HP-Z4-G5-W3-2423-Workstation.jpg"
+        image:"./image/HP-Z4-G5-W3-2423-Workstation.jpg"
     },
     {
         id:3,
@@ -52,7 +52,7 @@ const carts = [
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
         price:13000,
-        image:"../image/alienware-aurora-r12.webp"
+        image:"./image/alienware-aurora-r12.webp"
     },
     {
         id:4,
@@ -70,7 +70,7 @@ const carts = [
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
         price:9000,
-        image:"../image/HP_Omen_30L.jpg"
+        image:"./image/HP_Omen_30L.jpg"
     },
     {
         id:5,
@@ -88,7 +88,7 @@ const carts = [
             intel:["Core i3-13100F","Core i5-13600K","Core i9-13900K","Core i7-13700K","Intel Core i5-13400"]
         },
         price:10000,
-        image:"../image/msi_trident_3.jpg"
+        image:"./image/msi_trident_3.jpg"
     },
     {
         id:6,
@@ -103,7 +103,7 @@ const carts = [
         },
         processeur:null,
         price:7500,
-        image:"../image/CyberPowerPC_Gamer_Xtreme_VR.jpg"
+        image:"./image/CyberPowerPC_Gamer_Xtreme_VR.jpg"
     },
     {
         id:7,
@@ -114,7 +114,7 @@ const carts = [
         graphics:null,
         processeur:null,
         price:10000,
-        image:"../image/corsair_vengence.jpg"
+        image:"./image/corsair_vengence.jpg"
     },
     {
         id:8,
@@ -125,7 +125,7 @@ const carts = [
         graphics:null,
         processeur:null,
         price:8000,
-        image:"../image/dell_precision.jpg"
+        image:"./image/dell_precision.jpg"
     },
     //Smartphone
     {
@@ -139,7 +139,7 @@ const carts = [
             Snapdragon:["Snapdragon 8 Gen 2","Snapdragon 7 Gen 2","Snapdragon 6 Gen 2","Snapdragon 4 Gen 2"]
         },
         price:12000,
-        image:"../image/S24Ultra.jpg"
+        image:"./image/S24Ultra.jpg"
     },
     {
         id:10,
@@ -149,7 +149,7 @@ const carts = [
         memoire:["125GB","250GB","500GB"],
         processeur:null,
         price:11000,
-        image:"../image/iphone14.jpg"
+        image:"./image/iphone14.jpg"
     },
     {
         id:11,
@@ -159,7 +159,7 @@ const carts = [
         memoire:["125GB","250GB","500GB"],
         processeur:null,
         price:9000,
-        image:"../image/googlePixel.jpg"
+        image:"./image/googlePixel.jpg"
     },
     {
         id:12,
@@ -169,7 +169,7 @@ const carts = [
         memoire:["125GB","250GB","500GB"],
         processeur:null,
         price:9000,
-        image:"../image/onePlus_!1.jpg"
+        image:"./image/onePlus_!1.jpg"
     },
     {
         id:13,
@@ -182,7 +182,7 @@ const carts = [
             Snapdragon:["Snapdragon 8 Gen 2","Snapdragon 7 Gen 2","Snapdragon 6 Gen 2","Snapdragon 4 Gen 2"]
         },
         price:9500,
-        image:"../image/xiomi14.jpg"
+        image:"./image/xiomi14.jpg"
     },
     //souris
     {
@@ -193,7 +193,7 @@ const carts = [
         dpi:["100","25600"],
         color:["black","white"],
         price:1500,
-        image:"../image/logitechProX.jpg"
+        image:"./image/logitechProX.jpg"
     },
     {
         id:15,
@@ -203,7 +203,7 @@ const carts = [
         dpi:["100","35000"],
         color:["black","white","orange"],
         price:1300,
-        image:"../image/razerViper.jpg"
+        image:"./image/razerViper.jpg"
     },
     {
         id:16,
@@ -213,7 +213,7 @@ const carts = [
         dpi:["100","32000"],
         color:["black","white"],
         price:1500,
-        image:"../image/logitechProX.jpg"
+        image:"./image/logitechProX.jpg"
     },
     {
         id:17,
@@ -223,7 +223,7 @@ const carts = [
         dpi:["100","32000"],
         color:["black","white","blue"],
         price:1400,
-        image:"../image/razerDeathAdder.jpg"
+        image:"./image/razerDeathAdder.jpg"
     },
     {
         id:18,
@@ -233,7 +233,7 @@ const carts = [
         dpi:["100","32000"],
         color:["black","white","red"],
         price:1200,
-        image:"../image/ZowieEc2.jpg"
+        image:"./image/ZowieEc2.jpg"
 
     },
     //moniteur
@@ -244,7 +244,7 @@ const carts = [
         description:"24.5 FHD IPS monitor with 1ms response time and Adaptive Sync support",
         RefreshRate:"100Hz",
         price:2000,
-        image:"../image/CoolerMasterGA.jpg"
+        image:"./image/CoolerMasterGA.jpg"
     },
     {
         id:20,
@@ -253,7 +253,7 @@ const carts = [
         description:"27 FHD IPS monitor with 1ms response time and FreeSync support",
         RefreshRate:"100Hz",
         price:1500,
-        image:"../image/CoolerMasterGA2701.jpg"
+        image:"./image/CoolerMasterGA2701.jpg"
     },
     {
         id:21,
@@ -262,7 +262,7 @@ const carts = [
         description:"24 curved gaming monitor with FreeSync support",
         RefreshRate:"144Hz",
         price:3000,
-        image:"../image/SamsangC24RCG50.jpg"
+        image:"./image/SamsangC24RCG50.jpg"
     },
     // casque
     {
@@ -272,7 +272,7 @@ const carts = [
         description:"Premium noise-cancelling headphones with excellent sound quality and comfort",
         price:350,
         size:"universal",
-        image:"../image/SonyWh.jpg"
+        image:"./image/SonyWh.jpg"
     },
     {
         id:23,
@@ -281,7 +281,7 @@ const carts = [
         description:"Over-ear headphones with adaptive noise cancellation and immersive audio experience",
         price:400,
         size:"universal",
-        image:"../image/BoseQuitComfort.jpg"
+        image:"./image/BoseQuitComfort.jpg"
     },
     {
         id:24,
@@ -290,7 +290,7 @@ const carts = [
         description:"High-end wireless headphones with expansive sound and 100 hours of battery life",
         price:300,
         size:"universal",
-        image:"../image/CambridgeAudio.jpg"
+        image:"./image/CambridgeAudio.jpg"
     },
     //manette
     {
@@ -300,7 +300,7 @@ const carts = [
         description:"High-end controller with customizable components, adjustable-tension thumbsticks, and a premium design",
         color:["Black","white"],
         price:500,
-        image:"../image/xboxElitSerie2.jpg"
+        image:"./image/xboxElitSerie2.jpg"
     },
     {
         id:26,
@@ -309,7 +309,7 @@ const carts = [
         description:"Advanced controller for PlayStation 5 with customizable buttons, adjustable triggers, and a sleek design",
         color:["White with black accents"],
         price:600,
-        image:"../image/sonyDualSenseEdge.jpg"
+        image:"./image/sonyDualSenseEdge.jpg"
     },
     //electromenager
     {
@@ -319,7 +319,7 @@ const carts = [
         description:"A smart refrigerator with a built-in touchscreen, multiple storage compartments, and advanced cooling technology.",
         price:25000,
         litrage:671,
-        image:"../image/SamsangFamilyHub.jpg"
+        image:"./image/SamsangFamilyHub.jpg"
     },
     {
         id:28,
@@ -328,7 +328,7 @@ const carts = [
         description:"A large-capacity air fryer with rapid air technology for healthy frying, baking, grilling, and roasting",
         price:3000,
         litrage:3.5,
-        image:"../image/philipsAirfryerXXl.jpg"
+        image:"./image/philipsAirfryerXXl.jpg"
     },
     {
         id:29,
@@ -337,7 +337,7 @@ const carts = [
         description:"A front-loading washing machine with EcoSilence Drive, anti-vibration design, and a range of wash programs.",
         price:12000,
         litrage:9,
-        image:"../image/BoashSerie8WashingMachine.jpg"
+        image:"./image/BoashSerie8WashingMachine.jpg"
     }
 ]
 export default carts;
