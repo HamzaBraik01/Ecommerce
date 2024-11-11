@@ -13,28 +13,28 @@
 </head>
 
 <body>
-    <nav class="bg-black text-white  flex items-center justify-between">
+    <nav class="bg-black text-white  flex items-center justify-between  ">
         <div class="flex items-center">
-            <img src="Nexio.png" alt="Nexio Logo" class="h-21 w-52 ">
+            <img src="image/Nexio.png" alt="Nexio Logo" class="h-16 w-18 md:h-24 w-52 ">
         </div>
-        <ul class="flex space-x-8 text-sm/[17px] font-bold">
+        <ul class="hidden space-x-8 text-sm/[17px] font-bold md:flex">
             <li><a href="Home.html" class=" hover:text-orange-500 transition duration-300">Home</a></li>
             <li><a href="Catalogue.html" class="hover:text-orange-500 transition duration-300">Catalog</a></li>
             <li><a href="Apropos.html" class="hover:text-orange-500 transition duration-300">About</a></li>
             <li><a href="Contact.html" class="hover:text-orange-500 transition duration-300">Contact</a></li>
         </ul>
         <div>
-            <img src="shopping.png" alt="panier icon" class="h-8 w-8 mr-10 cursor-pointer">
+            <img src="image/shopping.png" alt="panier icon" class="h-8 w-8 mr-10 cursor-pointer">
         </div>
     </nav>
-    <section class="w-full h-screen flex justify-center items-center bg-red-400">
-        <div class="w-full max-w-lg bg-white p-6 rounded-lg ">
-            <h2 class="text-4xl font-bold text-gray-700 text-center mb-9">contact us </h2>
-            <div class="grid grid-cols-2 gap-6">
+    <section class="pr-7 pl-7 w-full h-screen flex justify-center pb-24 items-center bg-red-400 md:p-0 ">
+        <div class="  max-w-lg bg-white p-6 rounded-lg md:mb-0 md:w-full">
+            <h2 class="text-2xl font-bold text-gray-700 text-center mb-9">contact us </h2>
+            <form class="w-auto grid grid-cols-2 gap-4 md:gap-6  ">
                 <div class="col-span-1">
                     <label for="FirstName" class="block text-sm font-medium text-gray-600">First Name</label>
                     <input id="FirstName" type="text" placeholder="Enter Your First Name" 
-                     class=" shadow-slate-400 shadow-md outline-none mt-1 block w-full  border-2 border-orange-500 rounded-md p-2">
+                     class=" shadow-slate-400 shadow-md outline-none mt-1 block w-full placeholder:text-sm/4  border-2 border-orange-500 rounded-md p-2">
                 </div>
                 <div class="col-span-1">
                     <label for="lastName" class="block text-sm font-medium text-gray-600">Last Name</label>
@@ -43,8 +43,8 @@
                 </div>
                 
                 <div class="col-span-1">
-                    <label for="nome1" class="block text-sm font-medium text-gray-600">Email</label>
-                    <input id="nome1" type="text" placeholder="enter your e-mail" 
+                    <label for="Emailreq" class="block text-sm font-medium text-gray-600">Email</label>
+                    <input id="Emailreq" type="text" placeholder="enter your e-mail" 
                     class="shadow-slate-400 shadow-md  outline-none mt-1 block w-full  border-2 border-orange-500 rounded-md p-2">
                 </div>
                 <div class="col-span-1">
@@ -54,24 +54,54 @@
                 </div>
                 <div class="col-span-2 flex justify-center">
                     <div class="w-full max-w-md">
-                        <label for="Message" class="block text-sm font-medium text-gray-600">Message</label>
-                        <textarea id="Message" placeholder="We would like to hear from you!" 
-                        class="shadow-slate-400 shadow-md outline-none mt-1 block w-full border-2 border-orange-500 rounded-md  p-2 h-52 resize-none"></textarea>
+                        <label for="textarea" class="block text-sm font-medium text-gray-600">Message</label>
+                        <textarea id="textarea" placeholder="We would like to hear from you!" 
+                        class="shadow-slate-400 shadow-md outline-none mt-1 block w-full border-2 border-orange-500 rounded-md  p-2 h-28 resize-none md:h-52"></textarea>
                     </div>
                 </div>
                 <div class="col-span-2 flex justify-end gap-3">
-                    <button  class="  w-32  text-orange-400 border-2 border-orange-500 font-medium py-2 rounded-md  hover:scale-110 transition-transform duration-300  ">
+                    <button id="canelbutton" class="  w-32  text-orange-400 border-2 border-orange-500 font-medium py-2 rounded-md  hover:scale-110 transition-transform duration-300  ">
                     canel
                     </button>
-                    <button type="submit" class=" w-32 bg-orange-600 text-neutral-700 font-semibold py-2 rounded-md hover:scale-110 transition-transform duration-300 ">
+                    <button id="submitbutton" class=" w-32 bg-orange-600 text-neutral-700 font-semibold py-2 rounded-md hover:scale-110 transition-transform duration-300 ">
                      Submit
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
-    
-        
+    <footer class="bg-black h-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 pl-16 p-4">
+            <div class=" mb-6 sm:mb-0">
+                <img src="image/Nexio.png" alt="Nexio Logo" class="h-16 w-18 md:h-[132px] w-[235px] ml-6 ">
+            </div>
+            <div class=" mt-14 ml-24">
+                <h3 class="text-slate-50 font-bold text-[22px] mb-4">Contact Info</h3>
+                <p class="text-white text-[20px] mb-4"><a href="#">065656565</a></p>
+                <p class="text-white text-[20px]"><a href="#">email@gmail.com</a></p>
+            </div>
+            <div class=" mt-14 ml-20">
+                <h3 class="text-slate-50 font-bold text-[22px] mb-4">QuickLinks</h3>
+                <p class="text-white text-[20px] mb-4"><a href="Home.html">Home</a></p>
+                <p class="text-white text-[20px] mb-4"><a href="Catalogue.html">Catalog</a></p>
+            </div>
+                <div class=" mt-14 ml-24">
+                <h3 class="text-slate-50 font-bold text-[22px] mb-4">Support</h3>
+                <p class="text-white text-[20px] mb-4"><a href="#">Shipping</a></p>
+                <p class="text-white text-[20px]"><a href="#">Refund Policy</a></p>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="flex justify-center gap-6 mt-4 pb-7 pr-12 text-white">
+                <a href="#"><img src="image/Facebook.png" alt="" class="w-10 h-10 mr-6"></a>
+                <a href="#"><img src="image/Instagram.png" alt="" class="w-10 h-10 mr-6"></a>
+                <a href="#"><img src="image/Group.png" alt="" class="w-10 h-10 mr-6"></a>
+                <a href="#"><img src="image/Discord.png" alt="" class="w-10 h-10"></a>
+
+            </div>
+            <div class="flex justify-center pb-4 "><p class="text-2xl text-white ">© 2024 Codebenders. All rights reserved | Nexio</p></div>
+
+    </footer>      
     <script src="./js/Contact.js"></script>
 </body>
 
