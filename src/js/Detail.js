@@ -6,7 +6,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0;
+let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalPrice = 0;
 //afficher image
 const image = document.getElementById("image");
 const img = document.createElement("img");
@@ -37,7 +37,9 @@ if(obj.memoire != null){
     })
 }
 function updatePrice(){
-    pricecontent.innerText = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice;
+    finalPrice = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice;
+    pricecontent.innerText = finalPrice
+    return finalPrice
 }
 // prendre le value de memoire checked
 memoire.addEventListener("change",function(){
@@ -301,4 +303,10 @@ proc.addEventListener("change",function(){
             })
         })
     }
+})
+export const donner = []
+const AddToCart = document.getElementById("AddToCart")
+AddToCart.addEventListener("click",()=>{
+    donner.push({titre : obj.name , image : obj.image , price : updatePrice()})
+    console.log(donner)
 })
