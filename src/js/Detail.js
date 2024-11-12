@@ -7,7 +7,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalDpiPrice = 0 , finalColorPrice = 0 , finalRefreshRate = 0 , finalPrice = 0;
+let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalDpiPrice = 0 , finalColorPrice = 0 , finalRefreshRate = 0 , finalPrice = 0 , finalManeteColor = 0;
 //afficher image
 const image = document.getElementById("image");
 const img = document.createElement("img");
@@ -610,4 +610,53 @@ if(obj.categorie == "casque"){
     processeur.innerText = obj.size
 
     pricecontent.innerText = obj.price
+}
+function updaManetePrice(){
+    finalPrice = price + finalManeteColor;
+    pricecontent.innerText = finalPrice;
+}
+
+if(obj.categorie == "manette"){
+    const cartegraphic = document.getElementById("carteTTILE")
+    cartegraphic.innerText = ""
+    const memoireTITLE = document.getElementById("memoireTITLE")
+    memoireTITLE.innerText = ""
+    const prosTITLE = document.getElementById("prosTITLE")
+    prosTITLE.innerText = "color"
+    const processeur = document.getElementById("processeur")
+
+
+    obj.color.forEach(m=>{
+        const radio = document.createElement("input");
+        radio.setAttribute("name","color")
+        radio.setAttribute("type","radio")
+        radio.setAttribute("value",m)
+        radio.style.accentColor = "#FC6736"
+        const label = document.createElement("label");
+        label.innerText = m 
+        label.style.marginRight="10px"
+        label.style.marginLeft="2px"
+        processeur.appendChild(radio)
+        processeur.appendChild(label)
+    })
+    processeur.addEventListener("change",function(){
+        const choosenColor = document.querySelector("input[name = 'color']:checked").value
+        switch(choosenColor){
+            case "Black":
+                finalManeteColor = 780;
+                console.log(finalManeteColor)
+                break;
+            case "white":
+                finalManeteColor = 600;
+                break;
+            case "White with black accents":
+                finalManeteColor = 500;
+                break;
+            default:
+                finalManeteColor = 0
+                break
+        }
+        updaManetePrice()
+
+    })
 }

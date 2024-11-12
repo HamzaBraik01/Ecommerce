@@ -307,7 +307,7 @@ const carts = [
         categorie:"manette",
         name:"Sony DualSense Edge",
         description:"Advanced controller for PlayStation 5 with customizable buttons, adjustable triggers, and a sleek design",
-        color:["White with black accents"],
+        color:["White with black accents","Black"],
         price:600,
         image:"./image/sonyDualSenseEdge.jpg"
     },
