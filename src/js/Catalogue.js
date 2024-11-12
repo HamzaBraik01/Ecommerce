@@ -60,8 +60,7 @@ document.querySelectorAll('.btn-paginate').forEach
 
             button.classList.add("is-paginate");
 
-            const pageNumber = button.getAttribute('data-page');
-
+            const pageNumber = button.getAttribute('data-page');  
 
             displayData(carts, pageNumber)
         });
