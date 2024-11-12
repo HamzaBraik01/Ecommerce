@@ -7,7 +7,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalDpiPrice = 0 , finalColorPrice = 0 ,finalPrice = 0;
+let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalDpiPrice = 0 , finalColorPrice = 0 , finalRefreshRate = 0 , finalPrice = 0;
 //afficher image
 const image = document.getElementById("image");
 const img = document.createElement("img");
@@ -554,4 +554,47 @@ if(obj.categorie == "souris"){
     }
     updateSourisPrice()
    })
+}
+function updateTv(){
+    finalPrice = null
+    finalPrice = price + finalRefreshRate
+    pricecontent.innerHTML = finalPrice
+    return finalPrice
+}
+if(obj.categorie == "moniteur"){
+    const cartegraphic = document.getElementById("carteTTILE")
+    cartegraphic.innerText = ""
+    const memoireTITLE = document.getElementById("memoireTITLE")
+    memoireTITLE.innerText = "refresh rate"
+    const prosTITLE = document.getElementById("prosTITLE")
+    prosTITLE.innerText = ""
+    const memoire = document.getElementById("memoire")
+    obj.RefreshRate.forEach(m=>{
+        const radio = document.createElement("input")
+        radio.setAttribute("type","radio");
+        radio.setAttribute("name","refresh")
+        radio.setAttribute("value",m)
+        radio.style.accentColor="#FC6736"
+        const label = document.createElement("label");
+        label.innerText = m
+        label.style.marginRight="10px"
+        label.style.marginLeft="2px"
+        memoire.appendChild(radio)
+        memoire.appendChild(label)
+    })
+    memoire.addEventListener("change",function(){
+        const chosenRATE = document.querySelector("input[name = 'refresh']:checked").value
+        switch(chosenRATE){
+            case "100Hz":
+            finalRefreshRate = null
+            finalRefreshRate = 600
+            break
+            case "144Hz":
+                finalRefreshRate = null
+                finalRefreshRate = 1200
+                break
+
+        }
+        updateTv()
+    })
 }

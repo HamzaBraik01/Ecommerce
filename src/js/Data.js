@@ -242,7 +242,7 @@ const carts = [
         categorie:"moniteur",
         name:"Cooler Master GA2501",
         description:"24.5 FHD IPS monitor with 1ms response time and Adaptive Sync support",
-        RefreshRate:"100Hz",
+        RefreshRate:["100Hz","144Hz"],
         price:2000,
         image:"./image/CoolerMasterGA.jpg"
     },
@@ -251,7 +251,7 @@ const carts = [
         categorie:"moniteur",
         name:"Cooler Master GA2701",
         description:"27 FHD IPS monitor with 1ms response time and FreeSync support",
-        RefreshRate:"100Hz",
+        RefreshRate:["100Hz","144Hz"],
         price:1500,
         image:"./image/CoolerMasterGA2701.jpg"
     },
@@ -260,7 +260,7 @@ const carts = [
         categorie:"moniteur",
         name:"Samsung C24RG50",
         description:"24 curved gaming monitor with FreeSync support",
-        RefreshRate:"144Hz",
+        RefreshRate:["100Hz","144Hz"],
         price:3000,
         image:"./image/SamsangC24RCG50.jpg"
     },
