@@ -598,3 +598,16 @@ if(obj.categorie == "moniteur"){
         updateTv()
     })
 }
+if(obj.categorie == "casque"){
+    const cartegraphic = document.getElementById("carteTTILE")
+    cartegraphic.innerText = ""
+    const memoireTITLE = document.getElementById("memoireTITLE")
+    memoireTITLE.innerText = ""
+    const prosTITLE = document.getElementById("prosTITLE")
+    prosTITLE.innerText = "size"
+
+    const processeur = document.getElementById("processeur")
+    processeur.innerText = obj.size
+
+    pricecontent.innerText = obj.price
+}
