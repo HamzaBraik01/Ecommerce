@@ -7,6 +7,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
+pricecontent.innerText = price
 let finalMemoriePrice = 0 , finalCartPrice = 0, finalProcessurePrice = 0 , finalDpiPrice = 0 , finalColorPrice = 0 , finalRefreshRate = 0 , finalPrice = 0 , finalManeteColor = 0;
 //afficher image
 const image = document.getElementById("image");
@@ -22,6 +23,11 @@ const description = document.getElementById("ProductDesc");
 description.textContent = obj.description
 // pour stocker des donner pour le panier
 export const donner = []
+function updatePrice(){
+    finalPrice = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice + finalColorPrice + finalDpiPrice + finalManeteColor + finalRefreshRate;
+    pricecontent.innerText = finalPrice
+    return finalPrice
+}
 // afficher radio button pour selection du memoire
 if(obj.categorie == "pc"){
     const memoire = document.getElementById("memoire")
@@ -40,11 +46,7 @@ if(obj.categorie == "pc"){
             memoire.appendChild(label)
         })
     }
-    function updatePrice(){
-        finalPrice = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice;
-        pricecontent.innerText = finalPrice
-        return finalPrice
-    }
+
     // prendre le value de memoire checked
     memoire.addEventListener("change",function(){
             const chosenMemoire = document.querySelector('input[name = "memoire"]:checked').value;
@@ -360,7 +362,7 @@ if(obj.categorie == "Smartphone"){
             finalMemoriePrice = 1000;
             break;
         }
-        updatePhonePrice()
+        updatePrice()
 })
 const proc = document.getElementById("processeur")
 if(obj.processeur != null){
@@ -422,7 +424,7 @@ proc.addEventListener("change",function(){
                     default:
                         finalProcessurePrice = 0;
                 }
-                updatePhonePrice()
+                updatePrice()
             })
         })
     }
@@ -457,7 +459,7 @@ proc.addEventListener("change",function(){
                         finalProcessurePrice = null
                         finalProcessurePrice = 1000
                 }
-                updatePhonePrice()
+                updatePrice()
             })
         })
     }
@@ -510,7 +512,7 @@ if(obj.categorie == "souris"){
         default:
             finalDpiPrice = 0
     }
-    updateSourisPrice()
+    updatePrice()
    })
    obj.color.forEach(element => {
     const radio = document.createElement("input")
@@ -552,7 +554,7 @@ if(obj.categorie == "souris"){
             finalColorPrice = null
             finalColorPrice = 250
     }
-    updateSourisPrice()
+    updatePrice()
    })
 }
 function updateTv(){
@@ -595,7 +597,7 @@ if(obj.categorie == "moniteur"){
                 break
 
         }
-        updateTv()
+        updatePrice()
     })
 }
 if(obj.categorie == "casque"){
@@ -656,7 +658,18 @@ if(obj.categorie == "manette"){
                 finalManeteColor = 0
                 break
         }
-        updaManetePrice()
+        updatePrice()
 
     })
+}
+
+if(obj.categorie == "electromenager"){
+    const cartegraphic = document.getElementById("carteTTILE")
+    cartegraphic.innerText = ""
+    const memoireTITLE = document.getElementById("memoireTITLE")
+    memoireTITLE.innerText = ""
+    const prosTITLE = document.getElementById("prosTITLE")
+    prosTITLE.innerText = "litrage"
+    const processeur = document.getElementById("processeur")
+    processeur.textContent = obj.litrage
 }
