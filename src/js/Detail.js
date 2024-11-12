@@ -1,11 +1,9 @@
 import carts from "./Data.js";
-// prendre un seul produit
 let params = new URLSearchParams(document.location.search);
-let id =1;
-console.log(id)
+let id = params.get("id");
+// prendre un seul produit
 const obj = carts.find(obj => obj.id == id);
 console.log(obj)
-
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
