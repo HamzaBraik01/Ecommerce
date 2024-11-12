@@ -22,7 +22,7 @@ content.textContent =  obj.name;
 const description = document.getElementById("ProductDesc");
 description.textContent = obj.description
 // pour stocker des donner pour le panier
-export const donner = []
+const donner = JSON.parse(localStorage.getItem("cardProduct")) || []
 function updatePrice(){
     finalPrice = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice + finalColorPrice + finalDpiPrice + finalManeteColor + finalRefreshRate;
     pricecontent.innerText = finalPrice
@@ -310,18 +310,9 @@ if(obj.categorie == "pc"){
             })
         }
     })
-    const AddToCart = document.getElementById("AddToCart")
-    AddToCart.addEventListener("click",()=>{
-        donner.push({titre : obj.name , image : obj.image , price : updatePrice()})
-        console.log(donner)
-    })
+   
 }
-function updatePhonePrice(){
-    finalPrice = 0
-    finalPrice = price +  finalMemoriePrice + finalProcessurePrice ;
-    pricecontent.innerText = finalPrice
-    return finalPrice
-}
+
 if(obj.categorie == "Smartphone"){
     const cartegraphic = document.getElementById("carteTTILE")
     cartegraphic.innerText = ""
@@ -488,12 +479,7 @@ if(obj.categorie == "souris"){
     memoire.appendChild(radio)
     memoire.appendChild(label)
    })
-   function updateSourisPrice(){
-    finalPrice = null;
-    finalPrice = price + finalDpiPrice + finalColorPrice;
-    pricecontent.innerText = finalPrice
-    return finalPrice
-   }
+   
    memoire.addEventListener("change",function(){
     const choosenDpi = document.querySelector('input[name = "dpi"]:checked').value;
     switch(choosenDpi){
@@ -556,12 +542,6 @@ if(obj.categorie == "souris"){
     }
     updatePrice()
    })
-}
-function updateTv(){
-    finalPrice = null
-    finalPrice = price + finalRefreshRate
-    pricecontent.innerHTML = finalPrice
-    return finalPrice
 }
 if(obj.categorie == "moniteur"){
     const cartegraphic = document.getElementById("carteTTILE")
@@ -673,3 +653,12 @@ if(obj.categorie == "electromenager"){
     const processeur = document.getElementById("processeur")
     processeur.textContent = obj.litrage
 }
+const AddToCart = document.getElementById("AddToCart")
+AddToCart.addEventListener("click",()=>{
+    donner.push({titre : obj.name , image : obj.image , price : updatePrice()})
+    localStorage.setItem("cardProduct",JSON.stringify(donner))
+})
+
+const data = JSON.parse(localStorage.getItem("cardProduct"))
+export default data
+console.log(data)
