@@ -213,6 +213,12 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+.bg-customRed{
+  background-color: #E95555;
+}
+.bg-inter{
+  background-color: #FBC3B1;
+}
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
