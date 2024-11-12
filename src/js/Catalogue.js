@@ -18,7 +18,7 @@ function displayData(data) {
                             <p class="font-bold text-xl mb-4" style="color: #FC6736;">$${product.price}</p>
                             <div class="flex justify-center space-x-4">
                                 <button style="background-color: #FC6736;" class="text-white px-2 py rounded-full">Add to Cart</button>
-                                <button style="background-color: #FC6736;" class="text-white px-2 py rounded-full">Customize</button>
+                                 <a href='../Detail.html?${product.id}'><button style="background-color: #FC6736;" class="text-white px-2 py rounded-full">Customize</button></a>
                             </div>
                         </div>
                     </div>`;
