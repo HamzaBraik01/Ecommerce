@@ -9,10 +9,10 @@
 </head>
 
 <header>
-    <nav class="bg-black fixed w-full z-20 top-0 start-0">
-        <div class="max-w-screen-xl flex items-center justify-between mx-20">
-            <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/logo.png" class="h-28" alt="Nexio Logo">
+    <nav class="bg-black w-full z-20 top-0 start-0">
+        <nav class="bg-black w-full z-20 top-0 start-0 px-4 md:px-20">
+            <div class="max-w-screen-xl w-full flex items-center justify-between">
+                <img src="./image/logo.png" class="h-28" alt="Nexio Logo">
             </a>
             <button class="inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden ml-auto"
                 onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="hidden md:block ml-10">
-                <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
+                <a href="#"><img src="./image/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
             </div>
         </div>
 
@@ -43,49 +43,108 @@
                 <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
                 <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
                 <li class="py-2 flex justify-center">
-                    <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
+                    <a href="#"><img src="./image/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
 
-<body class="bg-white flex items-center justify-center min-h-screen">
-    <div class="max-w-6xl mx-auto p-6 text-center">
-        <section class="catalogue mt-32" id="catalogue">
-            <h2 class="text-3xl font-bold text-gray-800 mb-12">Shop ALL</h2>
+<main class="flex-grow pt-2 pb-16">
+    <div class="max-w-6xl w-full mx-auto text-center">
+        <section class="catalogue" id="catalogue">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-12">Shop ALL</h2>
 
-            <div id="filter-buttons" class="flex justify-center space-x-6 mb-16">
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="Smartphone">Smartphones</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="pc">Laptops</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="moniteur">Television</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="electromenager">Household</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="manette">Games</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="casque">Headset</button>
-                <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
-                    data-category="souris">Mouse</button>
-            </div>
+                <div id="filter-buttons" class="flex justify-center flex-wrap space-x-6 mb-16">
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="Smartphone">Smartphones</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="pc">Laptops</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="moniteur">Television</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="electromenager">Household</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="manette">Games</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="casque">Headset</button>
+                    <button style="background-color: #FC6736;" class="filter-btn px-6 py text-white rounded-2xl"
+                        data-category="souris">Mouse</button>
+                </div>
 
-            <!-- Grid with product cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12" id="card">
-                <!-- Product cards here -->
-            </div>
+                <!-- Grid with product cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12" id="card">
+                    <!-- Product cards here -->
+                </div>
         </section>
+
         <!-- Pagination Section -->
         <div class="flex justify-center space-x-4 mt-8">
-            <button id="page1" class="px-4 py-2 bg-gray-300 rounded-lg text-black">1</button>
-            <button id="page2" class="px-4 py-2 bg-gray-300 rounded-lg text-black">2</button>
+            <button id="page1" class="px-4 py-2 rounded-lg text-red-600">1</button>
+            <button id="page2" class="px-4 py-2 rounded-lg text-red-500">2</button>
         </div>
     </div>
+</main>
 
-    <!-- Product Card -->
-    <!-- <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
+<footer class="bg-black w-full mt-auto">
+    <div class="container mx-auto py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <!-- Logo Section -->
+            <div>
+                <a href="./home.html">
+                    <img src="./image/logo.png" class="h-28" alt="Nexio Logo">
+                </a>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div>
+                <h4 class="text-white font-bold text-2xl mb-4">Contact Info</h4>
+                <div class="space-y-2">
+                    <p><a href="tel:+212420420420" class="text-gray-400 hover:text-white">+212 420420420</a></p>
+                    <p><a href="mailto:Email@youcode.com" class="text-gray-400 hover:text-white">Email@youcode.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div>
+                <h4 class="text-white font-bold text-2xl mb-4">Quick links</h4>
+                <div class="space-y-2">
+                    <p><a href="#" class="text-gray-400 hover:text-white">Home</a></p>
+                    <p><a href="#" class="text-gray-400 hover:text-white">Catalog</a></p>
+                </div>
+            </div>
+
+            <!-- Support Section -->
+            <div>
+                <h4 class="text-white font-bold text-2xl mb-4">Support</h4>
+                <div class="space-y-2">
+                    <p><a href="#" class="text-gray-400 hover:text-white">Shipping</a></p>
+                    <p><a href="#" class="text-gray-400 hover:text-white">Refund Policy</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="#" class="hover:opacity-75"><img src="/Facebook.png" alt="Facebook"></a>
+            <a href="#" class="hover:opacity-75"><img src="/Instagram.png" alt="Instagram"></a>
+            <a href="#" class="hover:opacity-75"><img src="/Twitch.png" alt="Twitch"></a>
+            <a href="#" class="hover:opacity-75"><img src="/Discord.png" alt="Discord"></a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center border-t border-gray-800 pt-8">
+            <p class="text-white text-2xl">© 2024 Codebenders. All rights reserved | Nexio</p>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="./js/Catalogue.js"></script>
+
+<!-- Product Card -->
+<!-- <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
                     <div class="flex flex-col items-center mb-2">
                         <img src="./image/thinkStation_P620.avif" alt="Product Image"
                             class="w-full h-40 object-cover rounded mb-4">
@@ -143,7 +202,7 @@
                 </div>
                 </div> -->
 
-    <!-- <div class="bg-white rounded-lg shadow-md p-4">
+<!-- <div class="bg-white rounded-lg shadow-md p-4">
                     <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-40 object-cover rounded mb-4">
                     <h3 class="font-bold text-lg mb-2">Product Name</h3>
                     <p class="text-gray-600 mb-4">This is a brief description of the product. It highlights key features and details.</p>
@@ -154,15 +213,4 @@
                     </div>
                 </div> -->
 
-    <!-- Repeat this card structure until there are 12 product cards in total -->
-
-    </div>
-    </section>
-    </div>
-
-    <script type="module" src="./js/Catalogue.js"></script>
-
-</body>
-
-
-</html>
+<!-- Repeat this card structure until there are 12 product cards in total -->

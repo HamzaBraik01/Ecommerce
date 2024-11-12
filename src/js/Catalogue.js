@@ -13,7 +13,7 @@ function displayData(data) {
             card.innerHTML += `   <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
                         <div class="flex flex-col items-center mb-2">
                             <img src="${product.image}" alt="Product Image" class="w-full h-40 object-cover rounded mb-4">
-                            <h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3>
+                            <a href='../Detail.html?${product.id}'><h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3></a>
                             <p class="text-gray-600 mb-4 text-center text-sm" style='height: 80px;'>${product.description.substring(0, 90)}... </p>
                             <p class="font-bold text-xl mb-4" style="color: #FC6736;">$${product.price}</p>
                             <div class="flex justify-center space-x-4">
