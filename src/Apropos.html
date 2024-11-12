@@ -8,25 +8,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-@keyframes slider {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-#carousel {
-  display: flex;
-  gap: 24px;
-  animation: slider 25s linear infinite;
-  width: 200%;
-}
-#carousel:hover {
-  animation-play-state: paused;
-}
-.logo {
-  height: 4rem;}
+            @keyframes slider {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+            }
+            #carousel {
+            display: flex;
+            gap: 24px;
+            animation: slider 25s linear infinite;
+            width: 200%;
+            }
+            #carousel:hover {
+            animation-play-state: paused;
+            }
+            .logo {
+            height: 4rem;}
       </style> 
 </head>
 <body class="">
@@ -44,75 +44,75 @@
             <img src="image/shopping.png" alt="panier icon" class="h-8 w-8 mr-10 cursor-pointer">
         </div>
     </nav>
-   <main class="flex-grow pt-20 relative">
+   <main class=" pt-20 relative h-52 md:h-full flex-grow">
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('image/clavier.png')]"></div>
 
-    <div class="text-white py-32 relative ml-60 z-30 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">About Nexio</h2>
-        <p class="text-lg sm:text-xl lg:text-2xl mb-6">We bring you the technology of the future today</p>
+    <div class="text-white px-14  md:py-32 relative md:ml-60 z-30 md:px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg sm:text-lg lg:text-6xl font-bold mb-4">About Nexio</h2>
+        <p class="text-lg sm:text-xl lg:text-2xl mb-6">We bring you the technology <br>of the future today</p>
     </div>
 </main>
 
-      <section class="mb-36 px-4">
-        <div class="flex justify-center mt-12">
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-center">
-                about <span class="text-orange-500">us</span>
-            </h1>
-        </div>
-        <div class="flex flex-col lg:flex-row items-center lg:justify-around mt-12 lg:mt-24 space-y-8 lg:space-y-0 lg:space-x-8">
-            <p class="w-full lg:w-[600px] font-bold text-lg md:text-2xl lg:text-3xl leading-[30px] md:leading-[35px] lg:leading-[40px] text-center lg:text-left">
-                Nexio is an innovative electronics company focused on delivering high-quality, user-centered technology for modern living. Competing with industry leaders, we are building a brand recognized for quality, reliability, and sustainability, with a vision for an accessible, connected future.
-            </p>
-            <img src="image/digital 3 1.png" alt="computer" class="w-full md:w-[408px] h-auto lg:h-[324px] object-cover">
-        </div>
-    </section>
+<section class="mb-12 md:mb-36 px-4">
+    <div class="flex justify-center mt-7 md:mt-12">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-center">
+            about <span class="text-orange-500">us</span>
+        </h1>
+    </div>
+    <div class="flex flex-col-reverse lg:flex-row items-center lg:justify-around mt-2 lg:mt-16 space-y-6 lg:space-y-0 lg:space-x-8">
+        <p class="w-80  md:w-full  max-w-xl  font-bold  text-lg md:text-2xl lg:w-[525px] lg:text-[30px] leading-2 mt-7 md:mt-0 sm:leading-8 md:leading-9 md:text-center lg:text-left">
+            Nexio is an innovative electronics company focused on delivering high-quality, user-centered technology for modern living. Competing with industry leaders, we are building a brand recognized for quality, reliability, and sustainability, with a vision for an accessible, connected future.
+        </p>
+        <img src="image/digital 3 1.png" alt="computer" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[408px] md:h-auto lg:h-[324px] h-44 object-cover rounded-md">
+    </div>
+</section>
+
     
 
 
-    <section class="flex justify-center mb-12 px-4">
-      <div class="grid grid-cols-3 gap-y-6 gap-x-4 sm:gap-x-6">
+    <section class="flex justify-center  mb-12 px-4">
+      <div class="grid grid-cols-3 gap-y-6 gap-2 sm:gap-x-20  lg:gap-x-11">
           <div class="flex justify-center">
-              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-base py-1 px-2 sm:py-[2px] sm:px-[5px] bg-orange-500">Mission</h1>
+              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-lg py-1 px-2 md:px-3 sm:py-[2px] sm:px-[5px] bg-orange-500">Mission</h1>
           </div>
             <div class="flex justify-center">
-              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-base py-1 px-2 sm:py-[2px] sm:px-[5px] bg-orange-500">Vision</h1>
+              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-lg py-1 px-2 md:px-3  sm:py-[2px] sm:px-[5px] bg-orange-500">Vision</h1>
           </div>
   
           <div class="flex justify-center">
-              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-base py-1 px-2 sm:py-[2px] sm:px-[5px] bg-orange-500">Valeurs</h1>
+              <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-sm lg:text-lg py-1 px-2 md:px-3  sm:py-[2px] sm:px-[5px] bg-orange-500">Valeurs</h1>
           </div>
   
           <div class="relative">
-              <div class="absolute bottom-2 right-2 bg-customRed w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center">
-                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold w-28 sm:w-36 md:w-48 lg:w-60 text-center">
-                      Provide innovative and accessible electronic solutions that simplify and enrich the everyday lives of our users.
+              <div class="absolute bottom-2 right-2 md:bottom-3 md:right-3  bg-customRed w-[120px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-2xl font-semibold w-28 sm:w-36 md:w-48 lg:w-80 text-center">
+                      Provide innovative and <br>accessible electronic <br>solutions that simplify <br> and enrich the everyday <br> lives of our users.
                   </p>
               </div>
-              <div class="bg-inter w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center"></div>
+              <div class="bg-inter w-[122px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
           </div>
   
           <div class="relative">
-              <div class="absolute bottom-2 right-2 bg-customRed w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center">
-                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold w-28 sm:w-36 md:w-48 lg:w-60 text-center">
-                 To become a global leader in technology, recognized for the quality and durability of our products, while inspiring a more connected and responsible future.
+              <div class="absolute bottom-2 right-2 md:bottom-3 md:right-3 bg-customRed w-[122px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-2xl font-semibold w-[103px] sm:w-36 md:w-48 lg:w-80 text-center">
+                 To become a global<br> leader in technology,<br> recognized for the quality <br> and durability of our <br>products, while inspiring <br> a more connected and <br>responsible future.
                 </p>
               </div>
-              <div class="bg-inter w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center"></div>
+              <div class="bg-inter w-[122px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
           </div>
           <div class="relative">
-              <div class="absolute bottom-2 right-2 bg-customRed w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center">
-                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold w-28 sm:w-36 md:w-48 lg:w-60 text-center">
-                 Provide innovative and accessible electronic solutions that simplify and enrich the everyday lives of our users.
-                  </p>
+              <div class="absolute bottom-2 right-2 md:bottom-3 md:right-3  bg-customRed w-[122px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                  <p class="text-[8px] sm:text-xs md:text-sm lg:text-2xl font-semibold w-28 sm:w-36 md:w-48 lg:w-80 text-center">
+                    Innovation, quality, <br> sustainability, and <br> customer focus: the core <br> values that guide Nexio in <br> meeting the needs and <br> expectations of its <br> clients.                  </p>
               </div>
-              <div class="bg-inter w-[100px] h-[90px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[220px] lg:h-[200px] flex justify-center rounded-md items-center"></div>
+              <div class="bg-inter w-[122px] h-[102px] sm:w-[140px] sm:h-[120px] md:w-[180px] md:h-[160px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
           </div>
       </div>
   </section>
   
   
   <section id="partners-section" class="bg-white overflow-hidden mb-12">
-    <h2 class="text-black text-3xl sm:text-4xl md:text-5xl font-semibold text-center py-16">Our Partners</h2>
+    <h2 class="text-black text-3xl sm:text-4xl md:text-5xl font-semibold text-center pb-9 md:py-16">Our Partners</h2>
     <div id="carousel" class="flex  space-x-6 py-4 px-4 sm:space-x-8">
         <img class="logo w-24 sm:w-32 md:w-40" src="image/msi.png" alt="MSI">
         <img class="logo w-24 sm:w-32 md:w-40" src="image/sony.png" alt="Sony">
@@ -138,45 +138,44 @@
         <img class="logo w-24 sm:w-32 md:w-40" src="image/asus.png" alt="Asus">
     </div>
 </section>
-
-  <section class="px-4">
-    <h1 class="text-center text-4xl font-bold mb-8">FAQ</h1>
-    <div>
-        <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 h-14 rounded-[10px] mb-3">
-            <div class="flex pt-4">
-                <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
-                <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What are Nexio’s warranty and return policies?</h4>
+    <section class="px-4">
+        <h1 class="text-center text-4xl font-bold mb-8">FAQ</h1>
+        <div>
+            <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 rounded-[10px] mb-3 cursor-pointer"onclick = "Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What are Nexio’s warranty and return policies?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 text-gray-700">All our products come with a minimum one-year warranty that covers manufacturing defects. Products that are defective or do not meet expectations can be returned within 30 days of purchase, provided the receipt is available and the product is in good condition.</p>
+            </div>
+            <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 rounded-[10px] mb-3 cursor-pointer" onclick = "Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What payment methods does Nexio accept?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 text-gray-700">Nexio accepts all major credit cards, PayPal, and bank transfers, with options for installment payments on selected products.</p>
+            </div>
+            <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 rounded-[10px] mb-3 cursor-pointer" onclick = "Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">How do I contact customer support?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 text-gray-700">You can reach our customer support team via our website’s live chat, email at support@nexio.com, or phone at (123) 456-7890.</p>
+            </div>
+            <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 rounded-[10px] cursor-pointer" onclick = "Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">Does Nexio offer any discounts or promotions?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 text-gray-700">Yes, we regularly offer seasonal discounts and promotions. Check our website or subscribe to our newsletter for the latest offers.</p>
             </div>
         </div>
-        <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 h-14 rounded-[10px] mb-3">
-            <div class="flex pt-4">
-                <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
-                <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What payment methods does Nexio accept?</h4>
-                <p>All our products come with a minimum one-year warranty that covers manufacturing defects. Products that are defective or do not meet expectations can be returned within 30 days of purchase, provided the receipt is available and the product is in good condition.
-                </p>
-            </div>
-        </div>
-        <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 h-14 rounded-[10px] mb-3">
-            <div class="flex pt-4">
-                <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
-                <h4 class="text-sm sm:text-lg md:text-xl font-semibold">How do I contact customer support?</h4>
-             <p></p>
-            </div>
-        </div>
-        <div class="bg-inter mx-auto sm:mx-8 md:mx-16 lg:mx-72 h-14 rounded-[10px]">
-            <div class="flex pt-4">
-                <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
-                <h4 class="text-sm sm:text-lg md:text-xl font-semibold">Does Nexio offer any discounts or promotions?</h4>
-            </div>
-        </div>
-    </div>
-</section>
-
-  <section class="flex-grow pt-20 ">
-    <div class=" bg-cover bg-center bg-no-repeat bg-[url('image/info.jpg')] h-96">
-    <div class="text-center">
-    <p class="text-white text-4xl font-bold pt-6 ">Contact Us for more Informations</p> 
-    <button class="text-white bg-orange-600 font-semibold text-2xl rounded-lg w-32 h-11 mt-24">Click</button>
+    </section>
+  <section class=" flex-grow pt-20 z-30">
+    <div class=" bg-cover bg-center bg-no-repeat bg-[url('image/info.jpg')] md:h-96">
+    <div class="text-center ">
+    <p class="text-white text-lg md:text-4xl font-bold pt-4 md:pt-6 ">Contact Us for more Informations</p> 
+    <a href="Contact.html"><button class="text-white bg-orange-600 font-semibold text-sm md:text-2xl rounded-lg w-16 md:w-32 h-8 md:h-11 mt-10 mb-20 md:mt-28 transition-transform transform hover:scale-110 hover:bg-amber-800 ">Click</button></a>
    </div>
     </div>
   </section>
