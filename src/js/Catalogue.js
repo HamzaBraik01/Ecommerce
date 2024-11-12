@@ -1,15 +1,24 @@
 import carts from "./Data.js"
-displayData(carts)
+displayData(carts, 1)
 
-function displayData(data) {
+function displayData(data, paginate) {
     let card = document.getElementById('card')
 
     if (data.length > 0) {
+        let from, to;
+        if (paginate == 1) {
+            from = 1;
+            to = 13;
+            document.getElementById("page1").style = "color: #FC6736"
+            document.getElementById("page2").style = "color: black"
+        } else if (paginate == 2) {
+            from = 13;
+            to = 18;
+            document.getElementById("page2").style = "color: #FC6736"
+            document.getElementById("page1").style = "color: black"
+        }
 
-        data.forEach((product, index) => {
-
-            console.log(product);
-
+        data.slice(from, to).forEach((product, index) => {
             card.innerHTML += `   <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
                         <div class="flex flex-col items-center mb-2">
                             <img src="${product.image}" alt="Product Image" class="w-full h-40 object-cover rounded mb-4">
@@ -23,8 +32,8 @@ function displayData(data) {
                         </div>
                     </div>`;
         })
+        
     } else {
-
         card.innerHTML = 'no data '
     }
 }
@@ -33,28 +42,27 @@ document.querySelectorAll('.filter-btn').forEach
         button.addEventListener('click', () => {
             let card = document.getElementById('card').innerHTML = ''
             const category = button.getAttribute('data-category');
-            filterCategorie(category); // Call filter function
+            filterCategorie(category); 
         });
     });
 
 function filterCategorie(categorie) {
+
     let filteredCat = carts.filter(element => element.categorie === categorie);
     displayData(filteredCat);
 }
 
-function showPage(pageNumber) {
-    // On récupère les deux pages
-    const page1 = document.getElementById('1');
-    const page2 = document.getElementById('2');
+document.querySelectorAll('.btn-paginate').forEach
+    (button => {
 
-    // On montre ou cache chaque page selon le numéro choisi
-    if (pageNumber === 1) {
-        page1.classList.remove('hidden');
-        page2.classList.add('hidden');
-    } else {
-        page1.classList.add('hidden');
-        page2.classList.remove('hidden');
-    }
-}
+        button.addEventListener('click', () => {
+            let card = document.getElementById('card').innerHTML = ''
 
-  
+            button.classList.add("is-paginate");
+
+            const pageNumber = button.getAttribute('data-page');
+
+
+            displayData(carts, pageNumber)
+        });
+    });
