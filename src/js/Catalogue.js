@@ -33,7 +33,7 @@ function displayData(data, paginate) {
                         </div>
                     </div>`;
         })
-        
+
     } else {
         card.innerHTML = 'no data '
     }
@@ -43,7 +43,7 @@ document.querySelectorAll('.filter-btn').forEach
         button.addEventListener('click', () => {
             let card = document.getElementById('card').innerHTML = ''
             const category = button.getAttribute('data-category');
-            filterCategorie(category); 
+            filterCategorie(category);
         });
     });
 
@@ -59,8 +59,19 @@ document.querySelectorAll('.btn-paginate').forEach
 
             button.classList.add("is-paginate");
 
-            const pageNumber = button.getAttribute('data-page');  
+            const pageNumber = button.getAttribute('data-page');
 
             displayData(carts, pageNumber)
         });
     });
+
+const titleElement = document.getElementById("catalogue-title");
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.getAttribute("data-category");
+        titleElement.textContent = category;
+    });
+});
