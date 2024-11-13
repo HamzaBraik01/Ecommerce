@@ -696,9 +696,9 @@ video {
     width: 50%;
   }
 
-  .md\:w-\[\] {
+  /* .md\:w-\[\] {
     width: ;
-  }
+  } */
 
   .md\:w-\[50\%\] {
     width: 50%;
@@ -732,9 +732,9 @@ video {
     font-size: 25px;
   }
 
-  .md\:text-\[\] {
+  /* .md\:text-\[\] {
     color: ;
-  }
+  } */
 
   .md\:text-\[px\] {
     color: px;
