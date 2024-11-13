@@ -18,6 +18,7 @@ function displayData(data, paginate) {
             document.getElementById("page1").style = "color: black"
         }
 
+
         data.slice(from, to).forEach((product, index) => {
             card.innerHTML += `   <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
                         <div class="flex flex-col items-center mb-2">
@@ -47,14 +48,12 @@ document.querySelectorAll('.filter-btn').forEach
     });
 
 function filterCategorie(categorie) {
-
     let filteredCat = carts.filter(element => element.categorie === categorie);
     displayData(filteredCat);
 }
 
 document.querySelectorAll('.btn-paginate').forEach
     (button => {
-
         button.addEventListener('click', () => {
             let card = document.getElementById('card').innerHTML = ''
 
