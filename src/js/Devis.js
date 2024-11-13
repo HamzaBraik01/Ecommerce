@@ -31,3 +31,7 @@ function printPage() {
     window.print(); 
 }
 document.getElementById("printpg").addEventListener("click", printPage);
+function exitToHome() {
+    window.location.href = "Home.html"; 
+}
+document.getElementById("exitButton").addEventListener("click", exitToHome);
