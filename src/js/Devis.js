@@ -20,4 +20,9 @@ function generateNumber() {
     return number;
 }
 var devisNumber = year + "-" + month + "-" + generateNumber();
+var devisNumber = localStorage.getItem("devisNumber");
+if (!devisNumber) {
+    devisNumber = year + "-" + month + "-" + generateNumber();
+    localStorage.setItem("devisNumber", devisNumber);
+}
 document.getElementById("devisNumber").textContent = devisNumber;
