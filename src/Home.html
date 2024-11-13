@@ -8,71 +8,92 @@
   <link rel="stylesheet" href="./output.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    html{
+    html {
       scroll-behavior: smooth;
+    }
+
+    @keyframes slider {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+
+    }
+
+    #carousel {
+      animation: 25s slider infinite linear;
+    }
+
+    #carousel:hover {
+      animation-play-state: paused;
     }
   </style>
 
 </head>
 
-<body style="background-image: url(/homeImg1.jpg); background-size: cover; height: 100vh">
+<body>
 
   <header>
     <nav class="bg-black fixed w-full z-20 top-0 start-0">
-      <div class="max-w-screen-xl flex items-center justify-between mx-20">
-        <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/logo.png" class="h-28" alt="Nexio Logo">
-        </a>
-        <button class="inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden ml-auto"
-          onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
-          <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M3 5h14a1 1 0 100-2H3a1 1 0 100 2zM3 10h14a1 1 0 100-2H3a1 1 0 100 2zM3 15h14a1 1 0 100-2H3a1 1 0 100 2z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </button>
+        <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-20">
+            <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/logo.png" class="h-14 sm:h-20 lg:h-24" alt="Nexio Logo">
+            </a>
+            <button class="inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden ml-auto"
+                onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
+                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5h14a1 1 0 100-2H3a1 1 0 100 2zM3 10h14a1 1 0 100-2H3a1 1 0 100 2zM3 15h14a1 1 0 100-2H3a1 1 0 100 2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
 
-        <div class="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse flex-grow justify-center">
-          <ul class="flex space-x-8 font-semibold text-2xl text-white">
-            <li><a href="Home.html" class="hover:text-yellow-600">Home</a></li>
-            <li><a href="Catalogue.html" class="hover:text-yellow-600">Catalog</a></li>
-            <li><a href="Apropos.html" class="hover:text-yellow-600">About</a></li>
-            <li><a href="Contact.html" class="hover:text-yellow-600">Contact</a></li>
-          </ul>
+            <div class="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse flex-grow justify-center">
+                <ul class="flex space-x-8 font-semibold text-2xl text-white">
+                    <li><a href="Home.html" class="hover:text-yellow-600">Home</a></li>
+                    <li><a href="Catalogue.html" class="hover:text-yellow-600">Catalog</a></li>
+                    <li><a href="Apropos.html" class="hover:text-yellow-600">About</a></li>
+                    <li><a href="Contact.html" class="hover:text-yellow-600">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="hidden md:block ml-10">
+                <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
+            </div>
         </div>
 
-        <div class="hidden md:block ml-10">
-          <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
+        <div class="hidden md:hidden pr-52" id="navbar-sticky">
+            <ul class="flex flex-col p-4 font-semibold text-2xl text-white">
+                <li><a href="Home.html" class="block py-2 hover:text-primary_AL">Home</a></li>
+                <li><a href="Catalogue.html" class="block py-2 hover:text-primary_AL">Catalog</a></li>
+                <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
+                <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
+                <li class="py-2">
+                    <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
+                </li>
+            </ul>
         </div>
-      </div>
-
-      <div class="flex justify-end md:hidden pr-52" id="navbar-sticky">
-        <ul class="flex flex-col p-4 font-semibold text-2xl text-white">
-          <li><a href="Home.html" class="block py-2 hover:text-primary_AL">Home</a></li>
-          <li><a href="Catalogue.html" class="block py-2 hover:text-primary_AL">Catalog</a></li>
-          <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
-          <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
-          <li class="py-2 flex justify-center">
-            <a href="#"><img src="/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
-          </li>
-        </ul>
-      </div>
     </nav>
+</header>
 
 
   </header>
 
 
-  <section class="mx-28  min-h-screen mt-28">
-    <div class="mt-56">
-      <h1 class="text-6xl text-white">
-        Cutting-edge electronics <br> designed to keep you ahead.</h1>
-      <p class="text-white mt-6 text-3xl">Experience the Future of Tech </p>
-      <button
-        class="bg-yellow-700 rounded-md px-8 py-3 mt-8 text-2xl font-semibold hover:bg-yellow-800 shadow-black drop-shadow-lg">Explore
-        Now!</button>
+  <section style="background-image: url(/homeImg1.jpg); background-size: cover; height: 100vh" class="">
+    <div class="mx-28">
+      <div class="flex flex-col justify-center pt-56">
+        <h1 class="text-6xl text-white">
+          Cutting-edge electronics <br> designed to keep you ahead.</h1>
+        <p class="text-white mt-6 text-3xl">Experience the Future of Tech </p>
+        <button
+          class="bg-yellow-700 rounded-md px-8 py-3 mt-8 text-2xl font-semibold hover:bg-yellow-800 shadow-black drop-shadow-lg w-max">Explore
+          Now!</button>
+      </div>
     </div>
-
   </section>
 
   <section class="bg-white h-44">
@@ -85,14 +106,14 @@
   </section>
   <div id="semi-section-div" class="bg-yellow-700 h-96">
     <div id="cards-container" class="mx-28 grid grid-cols-4 gap-12 pt-2">
-      
+
       <div id="card" class="bg-white rounded-lg">
         <div class="p-6">
-        <img src="/intel-core-i7-10700k-38-ghz-51-ghz 1.png" alt="">
-        <p class="font-semibold pt-8">Inel Core i7 10th gen </p>
-        <p class="text-yellow-700 font-bold">$400</p>
-      </div>
-       
+          <img src="/intel-core-i7-10700k-38-ghz-51-ghz 1.png" alt="">
+          <p class="font-semibold pt-8">Inel Core i7 10th gen </p>
+          <p class="text-yellow-700 font-bold">$400</p>
+        </div>
+
       </div>
 
       <div id="card" class="bg-white rounded-lg">
@@ -129,66 +150,130 @@
     <div class="bg-white">
       <h2 class="text-black text-5xl font-semibold text-center py-16">Testimonials</h2>
     </div>
-     <div style="background-image: url(/sectionImgCropped.jpg); background-size:cover; height: 100%;"  class="">
+    <div style="background-image: url(/sectionImgCropped.jpg); background-size:cover; height: 100%;" class="">
       <div id="cards-container" class="mx-48 grid grid-cols-4 gap-6 py-56">
-      
+
         <div id="card" style="background-image: url(/Rectangle\ 232.png); background-size: cover;" class=" rounded-sm">
-        
-            <div class="p-6 mx-1">
-              <!-- dynamic review content  -->
-               <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur.</p>
-               <p id="customer-name" class="text-xl pt-">Janice</p>
-          
-            </div>
-             
+
+          <div class="p-6 mx-1">
+            <!-- dynamic review content  -->
+            <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Qui, tenetur.</p>
+            <p id="customer-name" class="text-xl pt-">Janice</p>
+
+          </div>
+
         </div>
-  
+
         <div id="card" style="background-image: url(/Rectangle\ 232.png); background-size: cover;" class=" rounded-sm">
           <div class="p-6 mx-1">
             <!-- dynamic review content  -->
-             <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur.</p>
-             <p id="customer-name" class="text-xl pt-">Jason</p>
-        
+            <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Qui, tenetur.</p>
+            <p id="customer-name" class="text-xl pt-">Jason</p>
+
           </div>
-  
+
         </div>
-  
+
         <div id="card" style="background-image: url(/Rectangle\ 232.png); background-size: cover;" class=" rounded-sm">
           <div class="p-6 mx-1">
             <!-- dynamic review content  -->
-             <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur.</p>
-             <p id="customer-name" class="text-xl pt-">Jack</p>
-            
+            <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Qui, tenetur.</p>
+            <p id="customer-name" class="text-xl pt-">Jack</p>
+
           </div>
-  
+
         </div>
-  
+
         <div id="card" style="background-image: url(/Rectangle\ 232.png); background-size: cover;" class=" rounded-sm">
           <div class="p-6 mx-1">
             <!-- dynamic review content  -->
-             <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur.</p>
-             <p id="customer-name" class="text-xl pt-">John</p>
-            
+            <p id="review-text" class="text-white font-medium py-9">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Qui, tenetur.</p>
+            <p id="customer-name" class="text-xl pt-">John</p>
+
           </div>
-  
+
         </div>
-  
+
       </div>
-  
-      
-
-  </div>
-  </section>
 
 
-  <section id="partners-section" class="bg-white">
-    <h2 class="text-black text-5xl font-semibold text-center py-16">Our Partners</h2>
 
-    <div id="carousel" class="h-full pb-12">
-      <img class="h-26" src="/Frame 23.png" alt="">
+
+
+
+
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 p-4 sm:p-8 lg:p-12">
+
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-2">
+          <div class="px-1">
+            <img src="/Casque-1.png" alt="Gaming Monitor" class=" h-40 sm:h-48 md:h-56 lg:h-64">
+          </div>
+
+        </div>
+        <div class="px-4">
+          <h3 class="text-lg font-semibold text-gray-700">Gaming Monitor</h3>
+          <p class="text-yellow-700 font-bold">$400</p>
+          <button class="mt-4 w-full bg-yellow-700 text-white py-2 rounded hover:bg-yellow-800">View
+            Details</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </section>
- 
+
+
+  <section id="partners-section" class="bg-white overflow-hidden">
+    <h2 class="text-black text-5xl font-semibold text-center py-16">Our Partners</h2>
+
+    <div id="carousel" class="flex justify-between gap-24 w-full pb-12 cursor-pointer">
+      <img class="h-16" src="/msi.png" alt="">
+      <img class="h-16" src="/sony.png" alt="">
+      <img class="h-16" src="/snapdragon.png" alt="">
+      <img class="h-16" src="/lg.png" alt="">
+      <img class="h-16" src="/amd.png" alt="">
+      <img class="h-16" src="/Huawei.png" alt="">
+      <img class="h-16" src="/xiaomi.png" alt="">
+      <img class="h-16" src="/dell1.png" alt="">
+      <img class="h-16" src="/apple.png" alt="">
+      <img class="h-16" src="/razer.png" alt="">
+      <img class="h-16" src="/asus.png" alt="">
+      <img class="h-16" src="/msi.png" alt="">
+      <img class="h-16" src="/sony.png" alt="">
+      <img class="h-16" src="/snapdragon.png" alt="">
+      <img class="h-16" src="/lg.png" alt="">
+      <img class="h-16" src="/amd.png" alt="">
+      <img class="h-16" src="/Huawei.png" alt="">
+      <img class="h-16" src="/xiaomi.png" alt="">
+      <img class="h-16" src="/dell1.png" alt="">
+      <img class="h-16" src="/apple.png" alt="">
+      <img class="h-16" src="/razer.png" alt="">
+      <img class="h-16" src="/asus.png" alt="">
+
+    </div>
+  </section>
+
 
 
 
