@@ -22,7 +22,7 @@ content.textContent =  obj.name;
 const description = document.getElementById("ProductDesc");
 description.textContent = obj.description
 // pour stocker des donner pour le panier
-const donner = JSON.parse(localStorage.getItem("cardProduct")) || []
+let donner = JSON.parse(localStorage.getItem("cardProduct")) || [];
 function updatePrice(){
     finalPrice = price +  finalMemoriePrice + finalProcessurePrice + finalCartPrice + finalColorPrice + finalDpiPrice + finalManeteColor + finalRefreshRate;
     pricecontent.innerText = finalPrice
@@ -659,6 +659,5 @@ AddToCart.addEventListener("click",()=>{
     localStorage.setItem("cardProduct",JSON.stringify(donner))
 })
 
-const data = JSON.parse(localStorage.getItem("cardProduct"))
-export default data
-console.log(data)
+
+
