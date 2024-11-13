@@ -26,3 +26,8 @@ if (!devisNumber) {
     localStorage.setItem("devisNumber", devisNumber);
 }
 document.getElementById("devisNumber").textContent = devisNumber;
+
+function printPage() {
+    window.print(); 
+}
+document.getElementById("printpg").addEventListener("click", printPage);
