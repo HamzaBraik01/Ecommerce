@@ -5,8 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEVIS</title>
     <link rel="stylesheet" href="./output.css">
+    <style>
+        .bg-customOrange {
+            background-color: #FC6736;
+        }
+    </style>
 </head>
 <body>
-    <script src="./js/Devis.js"></script>
+    <div class="max-w-4xl mx-auto bg-white shadow-lg p-4 sm:p-8">
+        <a href="home.html" class="">
+            <img src="./logo.png" class="h-28" alt="Nexio Logo">
+        </a>
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold mt-4">Devis n°:<span id="devisNumber">2024-11-00001</span></h1>
+        </div>
+
+        <div class="flex flex-row justify-between mb-6 text-sm">
+            <div class=" sm:text-left ">
+                <p class="font-bold text-center">Nexio</p>
+                <p>19 Rue, Safi Morocco</p>
+                <p >20160</p>
+                <p>+212560897412</p>
+                <p>contact@Nexio.com</p>
+            </div>
+            <div class="flex flex-col justify-center text-right mt-4 text-sm mt-0">
+                <p><span class="font-bold text-red-500">Date de devis :</span><span id="today"></span></p>
+                <p><span class="font-bold text-red-500">Lieu de devis :</span> Safi-Maroc</p>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto mb-6">
+            <table class="min-w-full border border-gray-300 text-sm">
+                <thead>
+                    <tr class="bg-red-500 text-white">
+                        <th class="py-2 px-2 sm:px-4 border">N°</th>
+                        <th class="py-2 px-2 sm:px-4 border">Produit</th>
+                        <th class="py-2 px-2 sm:px-4 border">Prix</th>
+                        <th class="py-2 px-2 sm:px-4 border">Qty</th>
+                        <th class="py-2 px-2 sm:px-4 border">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="w-1/2 ml-auto text-sm">
+            <div class="flex justify-between font-bold border p-2 bg-red-100">
+                <span>Sous-Total:</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+
+            <div class="flex justify-between mt-1 font-bold border p-2">
+                <span>Tax 20%:</span>
+                <span id="tax">$0.00</span>
+            </div>
+
+            <div class="flex justify-between mt-1 font-bold border p-2 bg-red-500">
+                <span class="text-white">Total:</span>
+                <span class="text-white" id="total">$0.00</span>
+            </div>
+        </div>
+
+        <div class="flex  sm:flex-row justify-between items-center gap-4 mt-8">
+          <button class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Confirm</button>
+          <button class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Print</button>
+          <button class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Exit</button>
+        </div>
+    </div>
+    <script type="module" src="./js/Devis.js"></script>
 </body>
 </html>
