@@ -20,15 +20,15 @@ function displayData(data, paginate) {
 
 
         data.slice(from, to).forEach((product, index) => {
-            card.innerHTML += `   <div class="bg-white p-4" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
+            card.innerHTML += `   <div class="bg-white p-2 m-2 w-full md:1/2" style="border-radius: 15px; box-shadow: 8px 8px 8px rgba(252, 103, 54, 0.5);">
                         <div class="flex flex-col items-center mb-2">
                             <img src="${product.image}" alt="Product Image" class="w-full h-40 object-contain rounded mb-4">
                             <a href='/src/Detail.html?id=${product.id}'><h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3></a>
                             <!--<p class="text-gray-600 mb-4 text-center text-sm" style='height: 80px;'>${product.description.substring(0, 90)}.0.. </p>-->
-                            <p class="font-bold text-xl mb-4 mt-6" style="color: #FC6736;">${product.price} DH</p>
-                            <div class="flex justify-center space-x-4">
-                                <button style="background-color: #FC6736;" class="text-white lg:text-lg px-1 text-xs rounded-full"><pre>Add to cart</pre></button>
-                                 <a href='/src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full">Customize</button></a>
+                            <p class="font-bold text-xl mb-6 mt-2" style="color: #FC6736;">${product.price} DH</p>
+                            <div class="flex justify-center space-x-3">
+                                <button style="background-color: #FC6736;" class="text-white lg:text-lg px-1 text-xs rounded-full h-8"><pre>Add to cart</pre></button>
+                                 <a href='/src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-8 flex items-center">Customize</button></a>
                             </div>
                         </div>
                     </div>`;
