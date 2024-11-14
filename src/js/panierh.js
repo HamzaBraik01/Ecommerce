@@ -2,6 +2,8 @@ const data = JSON.parse(localStorage.getItem("cardProduct"))
 const container = document.getElementById("container")
 let counter= [];
 let finalTotal = 0;
+
+let valide = []
 function add(index){
     const count = document.getElementById(`count-${index}`)
     const price = document.getElementById(`price-${index}`)
@@ -28,7 +30,26 @@ function moin(index){
         }
     }
     count.innerText = counter[index]
+
     }
+
+    function deleteProduct(index){
+        const item = data[index]
+        data.splice(item,1)
+        localStorage.setItem("cardProduct",JSON.stringify(data))
+    }
+    function validation(){
+        const updateData = data.map((item,index)=>({
+            ...item,
+            quantity : counter[index],
+            totalPrice : item.price * counter[index]
+
+        }))
+        valide.push(updateData)
+        localStorage.setItem("valide",JSON.stringify(valide))
+        console.log(valide)
+    }
+
 
 data.forEach((element,index) => {
     
@@ -51,8 +72,12 @@ data.forEach((element,index) => {
                     <div class="flex  text-lg mt-10 gap-2">
                         <p id=price-${index} class="text-black mr-1 font-bold">${finalTotal}</p>
                         <button class="text-danger bg-transparent border-0 text-lg">
-                           <img src="image/Trash.png" alt="Trash">
+                           <img class="trash" src="image/Trash.png" alt="Trash">
                         </button>
+                </div>
+                <div>
+                    <button class="validation">devis</button>
+                    <buton class="validation">valider</button>
                 </div>
              </div>
     </div>  
@@ -67,4 +92,17 @@ document.querySelectorAll(".moin").forEach((item,index)=>{
     item.addEventListener("click",()=>{
         moin(index)
     })
+})
+document.querySelectorAll(".trash").forEach((item,index)=>{
+    item.addEventListener("click",(event)=>{
+        event.preventDefault()
+        deleteProduct(index)
+    })
+})
+
+document.querySelectorAll(".validation").forEach((item)=>{
+item.addEventListener("click",function(event){
+    event.preventDefault()
+    validation()
+})
 })
