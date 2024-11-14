@@ -26,7 +26,7 @@ function displayData(data, paginate) {
                             <!--<p class="text-gray-600 mb-4 text-center text-sm" style='height: 80px;'>${product.description.substring(0, 90)}.0.. </p>-->
                             <p class="font-bold text-xl mb-6 mt-2" style="color: #FC6736;">${product.price} DH</p> </div>
 
-                            <div class="flex justify-center space-x-3">
+                            <div class="flex justify-center space-x-3 md:gap-4">
                                 <button style="background-color: #FC6736;" class="text-white lg:text-lg px-1 text-xs rounded-full h-7"><pre>Add to cart</pre></button>
                                  <a href='/src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
                             </div>
