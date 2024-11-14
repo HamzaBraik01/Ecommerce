@@ -1,3 +1,4 @@
+
 const data = JSON.parse(localStorage.getItem("cardProduct"))
 const container = document.getElementById("container")
 let counter= [];
