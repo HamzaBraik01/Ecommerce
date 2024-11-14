@@ -62,6 +62,9 @@ document.querySelectorAll('.btn-paginate').forEach
             const pageNumber = button.getAttribute('data-page');
 
             displayData(carts, pageNumber)
+            
+            togglePagination(true);
+
         });
     });
 
@@ -73,5 +76,18 @@ filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         const category = button.getAttribute("data-category");
         titleElement.textContent = category;
+    });
+});
+
+const paginationSection = document.getElementById('pagination');
+
+function togglePagination(show) {
+    paginationSection.style.display = show ? 'block' : 'none';
+}
+
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+
+        togglePagination(false);
     });
 });
