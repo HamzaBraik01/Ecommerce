@@ -82,7 +82,7 @@ if (obj.categorie == "pc") {
         }
         updatePrice()
     })
-    if (obj.graphics != null) {
+    if (obj.graphics != null) { 
         createRaDioButton(Object.keys(obj.graphics), "graphic", graphic)
     }
     else if (obj.graphics == null) {
@@ -496,7 +496,7 @@ if (obj.categorie == "electromenager") {
 }
 const AddToCart = document.getElementById("AddToCart")
 AddToCart.addEventListener("click", () => {
-    donner.push({ titre: obj.name, image: obj.image, price: updatePrice() })
+    donner.push({ id:obj.id,titre: obj.name, image: obj.image, price: updatePrice() })
     localStorage.setItem("cardProduct", JSON.stringify(donner))
 })
 
