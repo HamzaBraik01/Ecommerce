@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEVIS</title>
-    <link rel="stylesheet" href="./output.css">
+    <!--<link rel="stylesheet" href="./output.css">-->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-customOrange {
             background-color: #FC6736;
@@ -69,7 +70,7 @@
 
         <div class="flex  sm:flex-row justify-between items-center gap-4 mt-8">
           <button class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Confirm</button>
-          <button id="printpg" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Print</button>
+          <button id="printpg" onclick="window.print()" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Print</button>
           <button id="exitButton" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Exit</button>
         </div>
     </div>
