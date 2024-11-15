@@ -7,105 +7,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body >
-    <!-- LE POP UP DU PANIER -->
- <div id="panier-tab" class="  z-20 h-100 w-[600px] bg-red-500 fixed inset-0 mt-0  grid grid-rows-[1fr,70px]">
-    <!-- <div id="close">
-        <button type="button" onclick="closepanier()"><img src="image/x-lg.png" alt="close-icone"></button>
-    </div> -->
-    <!-- <div id="cart-items">
-        <div class="item flex gap-1 my-2 bg-white rounded-3 py-2 justify-between px-2 mx-6 mt-40">
-            <div class="w-25 px-2 rounded-3 bg-transparent">
-                <img src="image/Iphone.png" alt="S24Ultra" class="w-100 h-100 rounded-1">
-            </div>
-            <div class="w-3/4 ml-3">
-                <h1 class="text-lg m-0  text-black font-bold ml-28 mt-5">S24 Ultra</h1>
-                <div class="flex justify-between ">
-                    <div id="qunatity" class="flex gap-2 items-center mt-10">
-                        <button class="text-black bg-orange-600 border rounded px-2">-</button>
-                        <p class="text-black font-bold">0</p>
-                        <button class="text-black bg-orange-600 border rounded px-2">+</button>
-                    </div>
-                    <div class="flex  text-lg mt-10 gap-2">
-                        <p class="text-black mr-1 font-bold">$9.99</p>
-                        <button class="text-danger bg-transparent border-0 text-lg">
-                           <img src="image/Trash.png" alt="Trash">
-                        </button>
-                </div>
-             </div>
-            </div>
-           </div>
-            </div>
-            <div class="flex gap-8 justify-center ">
-             <button class="bg-orange-600 rounded-[20px] text-white w-32 cursor-pointer" >Order </button>
-             <button class="bg-orange-600 rounded-[20px] text-white  w-32 cursor-pointer"> Devis    </button>
-            </div>
+    <div id="panier-tab" class="fixed top-0 right-0 z-50 h-full w-full sm:w-[400px] md:w-[600px] bg-red-500 flex flex-col p-4">
+        <!-- <div class="flex justify-end mb-4">
+            <button type="button" onclick="closeCart()" class="text-black text-6xl mt-[-25px]">&times;</button>
         </div> -->
-        <div id="container">
-
+    
+        <!-- Contenu du panier -->
+        <div id="container" class="flex-grow overflow-y-auto space-y-4 mb-6">
+            <!-- Exemples de cartes d'articles -->
+            <!-- <div class="item flex gap-4 bg-white rounded-lg p-4 shadow-md">
+                <img src="image_placeholder.jpg" alt="Produit" class="w-16 h-16 sm:w-20 sm:h-20 rounded-md object-cover">
+                <div class="flex flex-col justify-between w-full">
+                    <h1 class="text-lg font-bold text-gray-800">Nom du produit</h1>
+                    <div class="flex items-center justify-between mt-2">
+                        <div class="flex items-center gap-2">
+                            <button onclick="moin()" class="bg-orange-500 text-black px-2 py-1 rounded">-</button>
+                            <p class="text-black font-bold">1</p>
+                            <button onclick="add()" class="bg-orange-500 text-black px-2 py-1 rounded">+</button>
+                        </div>
+                        <p class="text-black font-bold">9.99 €</p>
+                        <button onclick="deleteProduct()" class="text-red-600">
+                            <img src="trash_icon.png" alt="Supprimer" class="w-6 h-6">
+                        </button>
+                    </div>
+                </div>
+            </div> -->
         </div>
-
- <!-- Pop-up du panier -->
- <!-- <div id="panier-tab" class="z-20 h-full w-[400px] bg-red-500 fixed top-0 right-0 shadow-lg overflow-y-auto">
-    Bouton de fermeture -->
-    <!-- <div class="flex justify-end p-4">
-        <button type="button" onclick="closePanier()">
-            <img src="image/x-lg.png" alt="close-icone" class="w-6 h-6">
-        </button>
-    </div> -->
-    
-    <!-- Contenu du panier -->
-    <!-- <div id="container" class="px-6 pb-6"></div> -->
-    
-    <!-- Boutons d'actions -->
-    <!-- <div class="flex gap-8 justify-center">
-        <button class="bg-orange-600 rounded-[20px] text-white w-32 cursor-pointer">Order</button>
-        <button class="bg-orange-600 rounded-[20px] text-white w-32 cursor-pointer">Devis</button>
+        
+        <div id="c-btns" class="flex justify-center mt-4 space-x-2 gap-8 mb-10">
+            <a id="devisBtn" href="./src/Devis.html" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Devis</a>
+            <a href="#" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Order</a>
+        </div>
     </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <!-- <div id="item" class="grid grid-col-[70px,150px,50px,1fr] gap-3 text-center ">
-        <div id="image">
-            <img src="image/" style="width: 100%; " alt="pc-gamer">
-        </div>
-        <div id="name">
-            name
-        </div>
-        <div id="total-price">
-            $9
-        </div>
-        <div id="qunatity"> 
-            <button id="minus" class="inline-block w-6 h-6 bg-orange-600 text-black">-</button>
-            <button id ="plus" class="inline-block w-6 h-6 bg-orange-600 text-black" >+</button>
-        </div>
-      </div>   -->
-  <!-- </div>
-
-    <div class="flex gap-8 justify-center ">
-     <button class="bg-orange-600 rounded-[20px] text-white w-32 cursor-pointer" >Order </button>
-     <button class="bg-orange-600 rounded-[20px] text-white  w-32 cursor-pointer"> Devis    </button>
-    </div>-->
-<!-- </div> -->
 <script type="module" src="../src/js/panierh.js"></script>
 </body>

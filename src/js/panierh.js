@@ -58,31 +58,31 @@ data.forEach((element,index) => {
     counter[index] = 1
     finalTotal = data[index].price
     container.innerHTML += ` 
-    <div class="item flex gap-1 my-2 bg-white rounded-3 py-2 justify-between px-2 mx-6 mt-40">
-            <div class="w-25 px-2 rounded-3 bg-transparent">
-                <img src="${element.image}" alt="S24Ultra" class="w-100 h-100 rounded-1">
+    <div class=" flex gap-2 bg-white rounded-lg py-4 px-4 mx-4 mt-4 shadow-md ">
+    <div class="w-full sm:w-1/4 flex  items-center bg-transparent p-2">
+        <img src="${element.image}" alt="Produit" class="md:w-20 md:h-20 w-full h-full rounded-md object-cover">
+    </div>
+
+    <div class="w-full sm:w-3/4 flex flex-col justify-between ml-0 sm:ml-3">
+        <h1 class="text-lg text-black font-bold text-center sm:text-left mt-3 sm:mt-5">${element.titre}</h1>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-center mt-4 sm:mt-6">
+            <div id="qunatity" class="flex items-center gap-3">
+                 <button id="moin" class= "moin bg-orange-600 text-white border rounded px-3 py-1">-</button>
+                <p id="count-${index}" class="text-black font-bold">${counter[index]}</p>
+                <button id="" class="plus bg-orange-600 text-white border rounded px-3 py-1">+</button>
             </div>
-            <div class="w-3/4 ml-3">
-                <h1 class="text-lg m-0  text-black font-bold ml-28 mt-5">${element.titre}</h1>
-                <div class="flex justify-between ">
-                    <div id="qunatity" class="flex gap-2 items-center mt-10">
-                        <button id="moin" class="moin text-black bg-orange-600 border rounded px-2">-</button>
-                        <p id=count-${index} class="text-black font-bold">${counter[index]}</p>
-                        <button id="" class="plus text-black bg-orange-600 border rounded px-2">+</button>
-                    </div>
-                    <div class="flex  text-lg mt-10 gap-2">
-                        <p id=price-${index} class="text-black mr-1 font-bold">${finalTotal}</p>
-                        <button class="text-danger bg-transparent border-0 text-lg">
-                           <img class="trash" src="image/Trash.png" alt="Trash">
+            <div class="flex items-center gap-3 mt-4 sm:mt-0">
+                <p id="price-${index}" class="text-black font-bold">$${finalTotal}</p>
+                <button onclick="deleteProduct()" class="text-red-600">
+                            <img src="image/Trash.png" alt="Supprimer" class="w-6 h-6">
                         </button>
-                </div>
-                <div>
-                    <button class="validation">devis</button>
-                    <buton class="validation">valider</button>
-                </div>
-             </div>
-    </div>  
+            </div>
+        </div>
+    </div>
+</div>
 `
+
 });
 document.querySelectorAll(".plus").forEach((item,index)=>{
     item.addEventListener("click",()=>{
@@ -101,9 +101,17 @@ document.querySelectorAll(".trash").forEach((item,index)=>{
     })
 })
 
-document.querySelectorAll(".validation").forEach((item)=>{
-item.addEventListener("click",function(event){
+// Fonction pour ouvrir et fermer le pop-up du panier
+function openPanier() {
+    document.getElementById("panier-tab").classList.remove("translate-x-full");
+}
+
+function closePanier() {
+    document.getElementById("panier-tab").classList.add("hidden");
+}
+
+
+document.getElementById("devisBtn").addEventListener("click",function(event){
     event.preventDefault()
     validation()
-})
 })
