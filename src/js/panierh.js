@@ -67,16 +67,15 @@ data.forEach((element,index) => {
         <h1 class="text-lg text-black font-bold text-center sm:text-left mt-3 sm:mt-5">${element.titre}</h1>
         
         <div class="flex flex-col sm:flex-row justify-between items-center mt-4 sm:mt-6">
-            <div class="quantity flex items-center gap-3">
-                <button onclick="moin(${index})" class="bg-orange-600 text-white border rounded px-3 py-1">-</button>
+            <div id="qunatity" class="flex items-center gap-3">
+                 <button id="moin" class= "moin bg-orange-600 text-white border rounded px-3 py-1">-</button>
                 <p id="count-${index}" class="text-black font-bold">${counter[index]}</p>
-                <button onclick="add(${index})" class="bg-orange-600 text-white border rounded px-3 py-1">+</button>
+                <button id="" class="plus bg-orange-600 text-white border rounded px-3 py-1">+</button>
             </div>
-            
             <div class="flex items-center gap-3 mt-4 sm:mt-0">
-                <p id="price-${index}" class="text-black font-bold">${element.price} €</p>
-                <button onclick="deleteProduct(${index})" class="text-red-600">
-                    <img class="w-6 h-6" src="image/Trash.png" alt="Supprimer">
+                <p id="price-${index}" class="text-black font-bold">${finalTotal}</p>
+                 <button class="text-danger bg-transparent>
+                 <img class="trash w-6 h-6" src="image/Trash.png" alt="Trash">
                 </button>
             </div>
         </div>
