@@ -28,7 +28,7 @@ function displayData(data, paginate) {
 
                             <div class="flex justify-center space-x-3 p-2">
                                 <button style="background-color: #FC6736;" class="text-white lg:text-lg px-1 text-xs rounded-full h-7"><pre>Add To Cart</pre></button>
-                                 <a href='/src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
+                                 <a href='../src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
                             </div>
                     </div>`;
         })
