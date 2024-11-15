@@ -72,8 +72,8 @@ const tax = subTotal * 0.20;
 const total = subTotal + tax;
 
 document.getElementById("subtotal").textContent = `$${subTotal}`;
-document.getElementById("tax").textContent = `$${tax}`;
-document.getElementById("total").textContent = `$${total}`;
+document.getElementById("tax").textContent = `$${tax.toFixed(3)}`;
+document.getElementById("total").textContent = `$${total.toFixed(3)}`;
 /*document.getElementById("confirm").addEventListener("click",function(){
     
 })*/
