@@ -12,20 +12,20 @@
 
 <body>
     <header>
-          <!-- Panier Content Modal -->
-       <div id="panierModal" class="hidden absolute right-0  w-full  top-20  items-center justify-center z-50">
-        <div class="  rounded-lg shadow-lg w-full bg-transparent p-6">
-            <iframe src="./panierh.html" class="w-full h-80 rounded-lg" seamless></iframe>
-            <button onclick="closeModal()" class="absolute top-4 right-8 hover:text-red-600 text-xl font-bold">&times;</button>
-     </div>
- </div>
+        <!-- Panier Content Modal -->
+        <div id="panierModal" class="hidden absolute right-0  w-full  top-20  items-center justify-center z-50">
+            <div class="  rounded-lg shadow-lg w-full bg-transparent p-6">
+                <iframe src="./panierh.html" class="w-full h-80 rounded-lg" seamless></iframe>
+                <button onclick="closeModal()"
+                    class="absolute top-4 right-8 hover:text-red-600 text-xl font-bold">&times;</button>
+            </div>
+        </div>
         <nav class="bg-black  w-full z-20 top-0 start-0">
             <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-20">
                 <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="./image/Abdelmalek/logo.png" class="h-14 sm:h-20 lg:h-24" alt="Nexio Logo">
                 </a>
-                <button 
-                    class="inline-flex items-center p-2 text-white rounded-lg md:hidden ml-auto" 
+                <button class="inline-flex items-center p-2 text-white rounded-lg md:hidden ml-auto"
                     onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
                     <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -42,7 +42,8 @@
                     </ul>
                 </div>
                 <div class="hidden md:block ml-10">
-                    <a id="panier" href="#"><img src="./image/Abdelmalek/shopping-cart.png" alt="Shopping Cart" class="w-9 h-9"></a>
+                    <a id="panier" href="#"><img src="./image/Abdelmalek/shopping-cart.png" alt="Shopping Cart"
+                            class="w-9 h-9"></a>
                 </div>
             </div>
             <div class="hidden md:hidden" id="navbar-sticky">
@@ -52,7 +53,8 @@
                     <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
                     <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
                     <li class="py-2">
-                        <a id="panierPhone" href="#"><img src="./image/Abdelmalek/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
+                        <a id="panierPhone" href="#"><img src="./image/Abdelmalek/shopping-cart.png" alt="Shopping Cart"
+                                class="w-10 h-10"></a>
                     </li>
                 </ul>
             </div>
@@ -108,53 +110,54 @@
 
     <footer class="bg-black px-6 md:px-20 py-8">
         <div class="mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-400 text-lg font-medium">
-                <div class="flex mb-4 md:mb-0">
-            <a href="./image/Abdelmalek/home.html">
-              <img src="./image/Abdelmalek/logo.png" class="h-28 w-48" alt="Nexio Logo">
-            </a>
-          </div>
+            <div class="flex mb-4 md:mb-0">
+                <a href="./image/Abdelmalek/home.html">
+                    <img src="./image/Abdelmalek/logo.png" class="h-28 w-48" alt="Nexio Logo">
+                </a>
+            </div>
             <div>
-            <h4 class="text-white font-bold text-xl mb-2">Contact Info</h4>
-            <a href="#" class="block hover:underline text-sm">+212 420420420</a>
-            <a href="#" class="block hover:underline text-sm">Email@youcode.com</a>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-xl mb-2">Quick Links</h4>
-            <a href="#" class="block hover:underline text-sm">Home</a>
-            <a href="#" class="block hover:underline text-sm">Catalog</a>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-xl mb-2">Support</h4>
-            <a href="#" class="block hover:underline text-sm">Shipping</a>
-            <a href="#" class="block hover:underline text-sm">Refund Policy</a>
-          </div>
+                <h4 class="text-white font-bold text-xl mb-2">Contact Info</h4>
+                <a href="#" class="block hover:underline text-sm">+212 420420420</a>
+                <a href="#" class="block hover:underline text-sm">Email@youcode.com</a>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-xl mb-2">Quick Links</h4>
+                <a href="#" class="block hover:underline text-sm">Home</a>
+                <a href="#" class="block hover:underline text-sm">Catalog</a>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-xl mb-2">Support</h4>
+                <a href="#" class="block hover:underline text-sm">Shipping</a>
+                <a href="#" class="block hover:underline text-sm">Refund Policy</a>
+            </div>
         </div>
         <div id="socials-icons" class="flex justify-center gap-6 mt-8">
-          <a href="#"><img src="./image/Abdelmalek/Facebook.png" alt="Facebook" class="h-6 w-6 md:h-12 md:w-12"></a>
-          <a href="#"><img src="./image/Abdelmalek/Instagram.png" alt="Instagram" class="h-6 w-6 md:h-12 md:w-12"></a>
-          <a href="#"><img src="./image/Abdelmalek/Twitch.png" alt="Twitch" class="h-6 w-6 md:h-12 md:w-12"></a>
-          <a href="#"><img src="./image/Abdelmalek/Discord.png" alt="Discord" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Facebook.png" alt="Facebook" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Instagram.png" alt="Instagram" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Twitch.png" alt="Twitch" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Discord.png" alt="Discord" class="h-6 w-6 md:h-12 md:w-12"></a>
         </div>
-          <div class="flex justify-center mt-6">
-          <h3 class="text-white font-normal text-base md:text-xl text-center">© 2024 Codebenders. All rights reserved | Nexio</h3>
+        <div class="flex justify-center mt-6">
+            <h3 class="text-white font-normal text-base md:text-xl text-center">© 2024 Codebenders. All rights reserved
+                | Nexio</h3>
         </div>
-      </footer>
-      <script>
+    </footer>
+    <script>
         const panier = document.getElementById("panier")
         const panierPhone = document.getElementById("panierPhone")
         const panierModal = document.getElementById("panierModal")
         panier.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevents any default link action
-        panierModal.classList.remove("hidden"); // Show the modal
-    });
-    panierPhone.addEventListener("click",(event)=>{
-        event.preventDefault()
-        panierModal.classList.remove("hidden"); // Show the modal
-    })
-    
-    function closeModal() {
-        panierModal.classList.add("hidden"); // Hide the modal
-    }
+            event.preventDefault(); // Prevents any default link action
+            panierModal.classList.remove("hidden"); // Show the modal
+        });
+        panierPhone.addEventListener("click", (event) => {
+            event.preventDefault()
+            panierModal.classList.remove("hidden"); // Show the modal
+        })
+
+        function closeModal() {
+            panierModal.classList.add("hidden"); // Hide the modal
+        }
     </script>
     <script type="module" src="./js/Catalogue.js"></script>
 </body>
