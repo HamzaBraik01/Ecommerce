@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>panier</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body >
-    <div id="panier-tab" class="fixed top-0 right-0 z-50 h-full w-full sm:w-[400px] md:w-[600px] bg-red-500 flex flex-col p-4">
+
+<body>
+    <div id="panier-tab"
+        class="fixed top-0 right-0 z-50 h-full w-full sm:w-[400px] md:w-[600px] bg-red-500 flex flex-col p-4">
         <!-- <div class="flex justify-end mb-4">
             <button type="button" onclick="closeCart()" class="text-black text-6xl mt-[-25px]">&times;</button>
         </div> -->
-    
+
         <!-- Contenu du panier -->
         <div id="container" class="flex-grow overflow-y-auto space-y-4 mb-6">
             <!-- Exemples de cartes d'articles -->
@@ -33,11 +36,18 @@
                 </div>
             </div> -->
         </div>
-        
+
         <div id="c-btns" class="flex justify-center mt-4 space-x-2 gap-8 mb-10">
-            <a id="devisBtn" href="./src/Devis.html" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Devis</a>
+            <a id="devisBtn" href=""
+                class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Devis</a>
             <a href="#" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Order</a>
         </div>
     </div>
-<script type="module" src="../src/js/panierh.js"></script>
+    <script>
+        const devisBtn = document.getElementById("devisBtn")
+        devisBtn.addEventListener("click", () => {
+            parent.location.href = "./Devis.html"
+        })
+    </script>
+    <script type="module" src="../src/js/panierh.js"></script>
 </body>
