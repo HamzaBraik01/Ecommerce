@@ -58,9 +58,9 @@ data.forEach((element,index) => {
     counter[index] = 1
     finalTotal = data[index].price
     container.innerHTML += ` 
-    <div class="item flex flex-col sm:flex-row gap-2 bg-white rounded-lg py-4 px-4 mx-2 mt-4 shadow-md w-full max-w-md sm:max-w-none">
-    <div class="w-full sm:w-1/4 flex justify-center items-center bg-transparent p-2">
-        <img src="${element.image}" alt="Produit" class="w-20 h-20 sm:w-full sm:h-full rounded-md object-cover">
+    <div class=" flex flex-col sm:flex-row gap-2 bg-white rounded-lg py-4 px-4 mx-2 mt-4 shadow-md ">
+    <div class="w-full sm:w-1/4 flex  items-center bg-transparent p-2">
+        <img src="${element.image}" alt="Produit" class="md:w-20 md:h-20 w-full h-full rounded-md object-cover">
     </div>
 
     <div class="w-full sm:w-3/4 flex flex-col justify-between ml-0 sm:ml-3">
@@ -101,12 +101,6 @@ document.querySelectorAll(".trash").forEach((item,index)=>{
     })
 })
 
-document.querySelectorAll(".validation").forEach((item)=>{
-item.addEventListener("click",function(event){
-    event.preventDefault()
-    validation()
-})
-})
 // Fonction pour ouvrir et fermer le pop-up du panier
 function openPanier() {
     document.getElementById("panier-tab").classList.remove("translate-x-full");
@@ -115,3 +109,9 @@ function openPanier() {
 function closePanier() {
     document.getElementById("panier-tab").classList.add("translate-x-full");
 }
+
+
+document.getElementById("devisBtn").addEventListener("click",function(event){
+    event.preventDefault()
+    validation()
+})
