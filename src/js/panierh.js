@@ -58,7 +58,7 @@ data.forEach((element,index) => {
     counter[index] = 1
     finalTotal = data[index].price
     container.innerHTML += ` 
-    <div class=" flex flex-col sm:flex-row gap-2 bg-white rounded-lg py-4 px-4 mx-2 mt-4 shadow-md ">
+    <div class=" flex gap-2 bg-white rounded-lg py-4 px-4 mx-4 mt-4 shadow-md ">
     <div class="w-full sm:w-1/4 flex  items-center bg-transparent p-2">
         <img src="${element.image}" alt="Produit" class="md:w-20 md:h-20 w-full h-full rounded-md object-cover">
     </div>
@@ -107,7 +107,7 @@ function openPanier() {
 }
 
 function closePanier() {
-    document.getElementById("panier-tab").classList.add("translate-x-full");
+    document.getElementById("panier-tab").classList.add("hidden");
 }
 
 
