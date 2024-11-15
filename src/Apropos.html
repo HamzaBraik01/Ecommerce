@@ -28,6 +28,13 @@
       </style> 
 </head>
 <body class="">
+         <!-- Panier Content Modal -->
+         <div id="panierModal" class="hidden absolute right-0  w-full  top-20  items-center justify-center z-50">
+            <div class="  rounded-lg w-full bg-transparent p-6">
+                <iframe src="./panierh.html" class="w-full h-80 rounded-lg" seamless></iframe>
+                <button onclick="closeModal()" class="absolute top-4 right-8 hover:text-red-600 text-xl font-bold">&times;</button>
+         </div>
+     </div>
     <nav class="bg-black fixed w-full z-20 top-0 start-0">
         <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-20">
             <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -51,7 +58,7 @@
                 </ul>
             </div>
             <div class="hidden md:block ml-10">
-                <a href="#"><img src="./image/shopping.png" alt="Shopping Cart" class="w-9 h-9"></a>
+                <a id="panier" href="#"><img src="./image/shopping.png" alt="Shopping Cart" class="w-9 h-9"></a>
             </div>
         </div>
         <div class="hidden md:hidden" id="navbar-sticky">
@@ -61,7 +68,7 @@
                 <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
                 <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
                 <li class="py-2">
-                    <a href="#"><img src="./image/shopping.png" alt="Shopping Cart" class="w-10 h-10"></a>
+                    <a id="panierPhone" href="#"><img src="./image/shopping.png" alt="Shopping Cart" class="w-10 h-10"></a>
                 </li>
             </ul>
         </div>
@@ -235,6 +242,23 @@
     </div>
   </footer>
   
+  <script>
+    const panier = document.getElementById("panier")
+    const panierPhone = document.getElementById("panierPhone")
+    const panierModal = document.getElementById("panierModal")
+    panier.addEventListener("click", (event) => {
+    event.preventDefault();
+    panierModal.classList.remove("hidden");
+});
+panierPhone.addEventListener("click",(event)=>{
+    event.preventDefault();
+    panierModal.classList.remove("hidden");
+})
+
+function closeModal() {
+    panierModal.classList.add("hidden");
+}
+</script>
   <script src="./js/Apropos.js"></script>
 </body>
 </html>
