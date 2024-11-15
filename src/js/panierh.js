@@ -73,10 +73,10 @@ data.forEach((element,index) => {
                 <button id="" class="plus bg-orange-600 text-white border rounded px-3 py-1">+</button>
             </div>
             <div class="flex items-center gap-3 mt-4 sm:mt-0">
-                <p id="price-${index}" class="text-black font-bold">${finalTotal}</p>
-                 <button class="text-danger bg-transparent>
-                 <img class="trash w-6 h-6" src="image/Trash.png" alt="Trash">
-                </button>
+                <p id="price-${index}" class="text-black font-bold">$${finalTotal}</p>
+                <button onclick="deleteProduct()" class="text-red-600">
+                            <img src="image/Trash.png" alt="Supprimer" class="w-6 h-6">
+                        </button>
             </div>
         </div>
     </div>
