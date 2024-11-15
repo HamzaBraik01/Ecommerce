@@ -7,7 +7,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-pricecontent.innerText = price
+pricecontent.innerText = price + " DH"
 let finalMemoriePrice = 0, finalCartPrice = 0, finalProcessurePrice = 0, finalDpiPrice = 0, finalColorPrice = 0, finalRefreshRate = 0, finalPrice = 0, finalManeteColor = 0;
 //afficher image
 const image = document.getElementById("image");
@@ -25,7 +25,7 @@ description.textContent = obj.description
 let donner = JSON.parse(localStorage.getItem("cardProduct")) || [];
 function updatePrice() {
     finalPrice = price + finalMemoriePrice + finalProcessurePrice + finalCartPrice + finalColorPrice + finalDpiPrice + finalManeteColor + finalRefreshRate;
-    pricecontent.innerText = finalPrice
+    pricecontent.innerText = finalPrice + " DH"
     return finalPrice
 }
 const cartegraphic = document.getElementById("carteTTILE")
