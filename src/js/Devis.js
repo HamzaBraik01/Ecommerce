@@ -54,9 +54,9 @@ for (let i = 0; i < cart.length; i++) {
     <tr class="${i % 2 == 0 ? 'bg-red-100' : 'bg-white'} text-center">
         <td class="py-2 px-2 border">${i + 1}</td>
         <td class="py-2 px-2 border">
-            <div class="flex items-center justify-start gap-9">
-                <img src="${element.image}" alt="${element.titre}" class="w-8 h-8 ml-4">
-                <span class="font-medium">${element.titre}</span>
+             <div class="flex items-center justify-start gap-4 min-h-[50px]">
+                <img src="${element.image}" alt="${element.titre}" class="w-8 h-8">
+                <span class="font-normal">${element.titre}</span>
             </div>
         </td>
         <td class="py-2 px-2 border">$${element.price}</td>

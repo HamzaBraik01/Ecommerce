@@ -76,27 +76,31 @@
     </div>
     <!-- module Checkout -->
     <div id="confirmationMessage" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white rounded shadow-lg p-8 w-full max-w-2xl">
-            <h2 class="text-lg font-bold mb-4 text-center">Confirmation de la commande</h2>
-            <table class="min-w-full border border-gray-300 text-sm mb-4">
-                <thead>
-                    <tr class="bg-red-500 text-white">
-                        <th class="py-2 px-4 border">N°</th>
-                        <th class="py-2 px-4 border">Produit</th>
-                        <th class="py-2 px-4 border">Prix</th>
-                        <th class="py-2 px-4 border">Quantité</th>
-                        <th class="py-2 px-4 border">Total</th>
-                    </tr>
-                </thead>
-                <tbody id="confirmationTableBody">
-                </tbody>
-            </table>
+        <div class="bg-white rounded shadow-lg p-4 sm:p-6 w-[90%] max-w-sm sm:max-w-md lg:max-w-2xl">
+            <h2 class="text-lg sm:text-xl font-bold mb-4 text-center">Confirmation de la commande</h2>
+            <div class="overflow-x-auto mb-4">
+                <table class="min-w-full border border-gray-300 text-sm">
+                    <thead>
+                        <tr class="bg-red-500 text-white">
+                            <th class="py-2 px-4 border">N°</th>
+                            <th class="py-2 px-4 border">Produit</th>
+                            <th class="py-2 px-4 border">Prix</th>
+                            <th class="py-2 px-4 border">Quantité</th>
+                            <th class="py-2 px-4 border">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="confirmationTableBody">
+                        <!-- Content dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
             <div class="flex justify-between font-bold text-lg mb-4">
-                <p>Total : <span id="confirmationTotal">$0.00</span></p>
+                <span>Total :</span>
+                <span id="confirmationTotal">$0.00</span>
             </div>
             <div class="flex justify-end gap-4">
-                <button id="closeConfirmation" class="bg-gray-500 text-white py-2 px-4 rounded">Close</button>
-                <button id="payNow" class="bg-customOrange text-white py-2 px-4 rounded">Pay Now</button>
+                <button id="closeConfirmation" class="bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded">Close</button>
+                <button id="payNow" class="bg-customOrange hover:bg-orange-300 text-white py-2 px-4 rounded">Pay Now</button>
             </div>
         </div>
     </div>
