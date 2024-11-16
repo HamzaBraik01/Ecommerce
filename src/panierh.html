@@ -40,13 +40,25 @@
         <div id="c-btns" class="flex justify-center mt-4 space-x-2 gap-8 mb-10">
             <a id="devisBtn" href=""
                 class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Devis</a>
-            <a href="#" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Order</a>
+            <a id="order-btn" href="#" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Order</a>
         </div>
     </div>
     <script>
         const devisBtn = document.getElementById("devisBtn")
-        devisBtn.addEventListener("click", () => {
-            parent.location.href = "./Devis.html"
+        const orderBtn = document.getElementById("order-btn")
+        let devisValidate = false
+        orderBtn.addEventListener("click",()=>{
+            devisValidate = true
+            alert("order validated successufly , Now you can access devis page ")
+            
+        })
+        devisBtn.addEventListener("click",()=>{
+            if(devisValidate){
+                parent.location.href = "./Devis.html"
+            }
+            else{
+                alert("you have to valide the order first")
+            }
         })
     </script>
     <script type="module" src="../src/js/panierh.js"></script>
