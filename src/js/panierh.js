@@ -4,7 +4,7 @@ const container = document.getElementById("container")
 let counter= [];
 let finalTotal = 0;
 
-let valide = []
+let valide = [] 
 function add(index){
     const count = document.getElementById(`count-${index}`)
     const price = document.getElementById(`price-${index}`)
