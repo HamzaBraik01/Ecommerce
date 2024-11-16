@@ -37,11 +37,11 @@ function displayData(data, paginate) {
                     <a href='/src/Detail.html?id=${product.id}'><h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3></a>
                     <p class="font-bold text-xl mb-6 mt-2" style="color: #FC6736;">${product.price} DH</p>
                 </div>
-                <div class="flex justify-center space-x-3 p-2">
+                <div class="flex justify-center items-center space-x-3 p-2">
                     <button 
                         style="background-color: #FC6736;" 
-                        class="text-white lg:text-lg px-1 text-xs rounded-full h-7 add-to-cart-btn">
-                        Add To Cart
+                        class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center add-to-cart-btn">
+                        Add Cart
                     </button>
                     <a href='../src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
                 </div>
@@ -59,21 +59,15 @@ function displayData(data, paginate) {
 
 function addToCart(product) {
     try {
-        let cart = JSON.parse(localStorage.getItem("cart")) || []; 
-        cart.push(product); 
-        localStorage.setItem("cart", JSON.stringify(cart)); 
-        alert(`${product.name} a ete ajouter au panier!`); 
+        let cardProduct = JSON.parse(localStorage.getItem("cardProduct")) || []; 
+        console.log("test product ",product);
+        cardProduct.push({id:product.id,titre:product.name,image:product.image,price:product.price}); 
+        localStorage.setItem("cardProduct", JSON.stringify(cardProduct)); 
     } catch (error) {
         console.error("Erreur lors de l'ajout au panier :", error);
         alert("Une erreur s'est produite lors de l'ajout au panier.");
     }
 }
-
-function displayCart() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log("Contenu du panier :", cart);
-}
-
 
 document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
