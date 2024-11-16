@@ -118,6 +118,8 @@ document.getElementById("closeConfirmation").addEventListener("click", () => {
 
 document.getElementById("payNow").addEventListener("click", () => {
     localStorage.removeItem("valide");
+    localStorage.removeItem("devisNumber");
+    localStorage.removeItem("cardProduct");
     document.getElementById("confirmationMessage").classList.add("hidden");
     window.location.href = "Home.html";
 });
