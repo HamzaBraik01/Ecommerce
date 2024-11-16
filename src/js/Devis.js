@@ -59,9 +59,9 @@ for (let i = 0; i < cart.length; i++) {
                 <span class="font-normal">${element.titre}</span>
             </div>
         </td>
-        <td class="py-2 px-2 border">$${element.price}</td>
+        <td class="py-2 px-2 border">${element.price}DH</td>
         <td class="py-2 px-2 border">${element.quantity}</td>
-        <td class="py-2 px-2 border">$${total}</td>
+        <td class="py-2 px-2 border">${total}DH</td>
     </tr>
     `;
     tableBody.innerHTML += row;
@@ -71,9 +71,9 @@ for (let i = 0; i < cart.length; i++) {
 const tax = subTotal * 0.20;
 const total = subTotal + tax;
 
-document.getElementById("subtotal").textContent = `$${subTotal}`;
-document.getElementById("tax").textContent = `$${tax.toFixed(3)}`;
-document.getElementById("total").textContent = `$${total.toFixed(3)}`;
+document.getElementById("subtotal").textContent = `${subTotal}DH`;
+document.getElementById("tax").textContent = `${tax.toFixed(3)}DH`;
+document.getElementById("total").textContent = `${total.toFixed(3)}DH`;
 //function for checkout
 function CheckoutF() {
     const cart = (JSON.parse(localStorage.getItem("valide")) || []).flat();
@@ -99,16 +99,16 @@ function CheckoutF() {
             <tr class="${i % 2 == 0 ? 'bg-red-100' : 'bg-white'} text-center">
                 <td class="py-2 px-2 border">${i + 1}</td>
                 <td class="py-2 px-2 border">${cart[i].titre}</td>
-                <td class="py-2 px-2 border">$${cart[i].price}</td>
+                <td class="py-2 px-2 border">${cart[i].price}DH</td>
                 <td class="py-2 px-2 border">${cart[i].quantity}</td>
-                <td class="py-2 px-2 border">$${itemTotal.toFixed(2)}</td>
+                <td class="py-2 px-2 border">${itemTotal.toFixed(2)}DH</td>
             </tr>
         `;
         confirmationTableBody.innerHTML += row;
     }
 
    
-    document.getElementById("confirmationTotal").textContent = `$${total.toFixed(2)}`;
+    document.getElementById("confirmationTotal").textContent = `${total.toFixed(2)}DH`;
     document.getElementById("confirmationMessage").classList.remove("hidden"); 
 }
 
