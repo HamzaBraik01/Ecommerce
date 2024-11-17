@@ -3,6 +3,8 @@
 ## Contexte du Projet
 Nexio, une nouvelle société d’électronique, aspire à devenir un acteur majeur sur le marché, aux côtés de géants comme Apple, Samsung et Huawei. Avec une large gamme de produits incluant smartphones, ordinateurs portables, téléviseurs, et appareils électroménagers, Nexio vise à offrir une expérience utilisateur engageante et moderne grâce à son nouveau site web.
 
+👉 **Lien vers le prototype Figma** : [Nexio - Ecommerce Website Design](https://www.figma.com/design/4ipNDW5uMS22is2erqSSlQ/Ecommerce-website?node-id=0-1&t=mbOOHSbjy8vufAk3-0)
+
 ---
 
 ## Objectifs
@@ -25,7 +27,9 @@ Nexio, une nouvelle société d’électronique, aspire à devenir un acteur maj
   - Contact
 - **Charte graphique et logo** : Une identité visuelle simple et moderne.
 
-### Pages Développées
+---
+
+## Pages Développées
 #### 1. **Page d'Accueil**
 - Carrousel pour les produits phares.
 - Présentation des catégories et des avis clients.
@@ -76,7 +80,7 @@ Nexio, une nouvelle société d’électronique, aspire à devenir un acteur maj
 
 ---
 
-## Installation et Déploiement
+## Installation
 1. Clonez ce dépôt :  
    ```bash
    git clone https://github.com/HamzaBraik01/Ecommerce
